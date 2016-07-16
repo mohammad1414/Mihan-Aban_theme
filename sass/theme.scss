@@ -1,0 +1,90 @@
+@import "variables";
+@import "typography";
+
+body {
+	background-color: $theme_bg_color;
+	direction: rtl;
+	font-family: 'Iransans';
+}
+
+body,
+ul,
+a,
+div {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	transition: color 300ms ease-out;
+
+	&:hover {
+		color: $primary-color;
+	}
+}
+
+.clearfix:before,
+.clearfix:after {
+  	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.wrapper {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+
+// Header CSS
+
+.header {
+	background-color: #363636;
+	padding: 20px 0;
+
+	.menu-item {
+		padding-right: 60px;
+		font-size: 12px;
+
+		&:first-child {
+			padding-right: 0;
+		}
+
+		.menu-item-link {
+			color: $light-color;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	.logo {
+		display: inline-block;
+
+		a {
+			max-width: 70%;
+			display: inline-block;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}

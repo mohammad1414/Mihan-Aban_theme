@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Iransans';
+  src: url("font/IRANSans-Medium-web.woff") format("woff");
+  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 400; }
+
+body {
+  background-color: #f2f2f2;
+  direction: rtl;
+  font-family: 'Iransans'; }
+
+body,
+ul,
+a,
+div {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  transition: color 300ms ease-out; }
+  a:hover {
+    color: #f4793d; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.wrapper {
+  width: 1170px;
+  margin: 0 auto; }
+
+.header {
+  background-color: #363636;
+  padding: 20px 0; }
+  .header .menu-item {
+    padding-right: 60px;
+    font-size: 12px; }
+    .header .menu-item:first-child {
+      padding-right: 0; }
+    .header .menu-item .menu-item-link {
+      color: #fff; }
+      .header .menu-item .menu-item-link:hover {
+        color: #f4793d; }
+  .header .logo {
+    display: inline-block; }
+    .header .logo a {
+      max-width: 70%;
+      display: inline-block; }
+    .header .logo img {
+      width: 100%; }

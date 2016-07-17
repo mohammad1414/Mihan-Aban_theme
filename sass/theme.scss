@@ -12,7 +12,8 @@ ul,
 a,
 div,
 h1,
-h2 {
+h2,
+h3 {
 	margin: 0;
 	padding: 0;
 }
@@ -199,12 +200,48 @@ a {
     }
 }
 
+.widget {
+	margin-bottom: 45px;
+
+	.widget-title {
+		font-size: 13px;
+		margin-bottom: 10px;
+	}
+}
+
 .widget-about {
 	text-align: center;
+
+	.about-text {
+		margin: 0;
+	}
 
 	.image {
 		img {
 			border-radius: 50%;
 		}
+	}
+}
+
+.widget-cat {
+
+	.cat-item {
+		font-size: 12px;
+		border-bottom: 1px solid darken($theme_bg_color, 2%);
+
+		a {
+			display: block;
+			padding: 12px;
+    		color: #9a9a9a;
+
+    		&:hover {
+    			background-color: darken($theme_bg_color, 2%);
+    			color: $primary-color;
+    		}
+		}
+	}
+
+	.number {
+		float: left;
 	}
 }

@@ -22,7 +22,8 @@ ul,
 a,
 div,
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
   padding: 0; }
 
@@ -139,7 +140,29 @@ a {
   .sidebar p {
     color: #9a9a9a; }
 
+.widget {
+  margin-bottom: 45px; }
+  .widget .widget-title {
+    font-size: 13px;
+    margin-bottom: 10px; }
+
 .widget-about {
   text-align: center; }
+  .widget-about .about-text {
+    margin: 0; }
   .widget-about .image img {
     border-radius: 50%; }
+
+.widget-cat .cat-item {
+  font-size: 12px;
+  border-bottom: 1px solid #ededed; }
+  .widget-cat .cat-item a {
+    display: block;
+    padding: 12px;
+    color: #9a9a9a; }
+    .widget-cat .cat-item a:hover {
+      background-color: #ededed;
+      color: #f4793d; }
+
+.widget-cat .number {
+  float: left; }

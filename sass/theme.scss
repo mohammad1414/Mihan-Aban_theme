@@ -10,7 +10,9 @@ body {
 body,
 ul,
 a,
-div {
+div,
+h1,
+h2 {
 	margin: 0;
 	padding: 0;
 }
@@ -21,7 +23,8 @@ ul {
 
 a {
 	text-decoration: none;
-	transition: color 300ms ease-out;
+	transition: 300ms ease-out;
+	transition-property: opacity, background-color, color;
 
 	&:hover {
 		color: $primary-color;
@@ -47,7 +50,7 @@ a {
 }
 
 .wrapper {
-	width: 1170px;
+	width: 1000px;
 	margin: 0 auto;
 }
 
@@ -87,4 +90,99 @@ a {
 			width: 100%;
 		}
 	}
+}
+
+
+// Container CSS
+
+.container {
+	width: 69%;
+}
+
+.content {
+	padding: 55px 0;
+}
+
+
+// Post CSS
+
+.post {
+	background-color: #fff;
+	border: 1px solid darken($theme_bg_color, 6%);
+	margin-bottom: 45px;
+}
+
+.post-header {
+
+	a {
+		color:#3c3c3c;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+.post-image {
+	max-height: 400px;
+	overflow: hidden;
+
+	a {
+		display: block;
+	}
+
+	img {
+		max-width: 100%;
+		display: block;
+	}
+}
+
+.post-meta {
+
+	span {
+		padding-left: 20px;
+		display: inline-block;
+
+		&:last-child {
+			padding-left: 0;
+		}
+	}
+
+	a {
+		color: #c1c0c0;
+		font-size: 11px;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+.post-content {
+	padding: 45px 50px;
+}
+
+.main-content {
+	color: #636467;
+}
+
+.readmore {
+
+	a {
+		background-color: $primary-color;
+		border-radius: 3px;
+		color: $light-color;
+		font-size: 11px;
+		padding: 7px 17px;
+
+		&:hover {
+			background-color: darken($primary-color, 10%);
+		}
+	}
+}
+
+// Sidebar CSS
+
+.sidebar {
+	width: 30%;
 }

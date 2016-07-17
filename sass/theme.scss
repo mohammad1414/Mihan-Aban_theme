@@ -97,6 +97,10 @@ a {
 
 .container {
 	width: 69%;
+	display: inline-block;
+	vertical-align: top;
+    padding-left: 40px;
+    box-sizing: border-box;
 }
 
 .content {
@@ -185,4 +189,6 @@ a {
 
 .sidebar {
 	width: 30%;
+	background-color: $light-color;
+	display: inline-block;
 }

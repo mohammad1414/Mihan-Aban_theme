@@ -51,7 +51,7 @@ a {
   float: right; }
 
 .wrapper {
-  width: 1000px;
+  width: 1170px;
   margin: 0 auto; }
 
 .header {
@@ -75,7 +75,11 @@ a {
       width: 100%; }
 
 .container {
-  width: 69%; }
+  width: 67%;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 25px;
+  box-sizing: border-box; }
 
 .content {
   padding: 55px 0; }
@@ -127,4 +131,15 @@ a {
     background-color: #f0580e; }
 
 .sidebar {
-  width: 30%; }
+  width: 32%;
+  background-color: #fff;
+  display: inline-block;
+  padding: 50px 30px;
+  box-sizing: border-box; }
+  .sidebar p {
+    color: #9a9a9a; }
+
+.widget-about {
+  text-align: center; }
+  .widget-about .image img {
+    border-radius: 50%; }

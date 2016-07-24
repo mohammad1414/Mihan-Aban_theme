@@ -58,6 +58,8 @@ a {
 .header {
   background-color: #363636;
   padding: 20px 0; }
+  .header .menu {
+    display: inline-block; }
   .header .menu-item {
     padding-right: 60px;
     font-size: 12px; }
@@ -85,38 +87,37 @@ a {
 .content {
   padding: 55px 0; }
 
-.post {
+.container .post {
   background-color: #fff;
   border: 1px solid #e3e3e3;
   margin-bottom: 45px; }
 
-.post-header a {
+.container .post-header a {
   color: #3c3c3c; }
-  .post-header a:hover {
+  .container .post-header a:hover {
     color: #f4793d; }
 
-.post-image {
+.container .post-image {
   max-height: 400px;
   overflow: hidden; }
-  .post-image a {
-    display: block; }
-  .post-image img {
-    max-width: 100%;
-    display: block; }
+  .container .post-image a {
+    display: inline-block; }
+  .container .post-image img {
+    max-width: 100%; }
 
-.post-meta span {
+.container .post-meta span {
   padding-left: 20px;
   display: inline-block; }
-  .post-meta span:last-child {
+  .container .post-meta span:last-child {
     padding-left: 0; }
 
-.post-meta a {
+.container .post-meta a {
   color: #c1c0c0;
   font-size: 11px; }
-  .post-meta a:hover {
+  .container .post-meta a:hover {
     color: #f4793d; }
 
-.post-content {
+.container .post-content {
   padding: 45px 50px; }
 
 .main-content {
@@ -166,3 +167,38 @@ a {
 
 .widget-cat .number {
   float: left; }
+
+.widget-recent-post a {
+  display: inline-block;
+  color: #9a9a9a; }
+  .widget-recent-post a:hover {
+    color: #f4793d; }
+
+.widget-recent-post .post {
+  border: 0 none;
+  margin-bottom: 5px; }
+
+.widget-recent-post .post-image {
+  padding-left: 20px;
+  box-sizing: border-box;
+  max-width: 20%;
+  display: inline-block;
+  vertical-align: top; }
+
+.widget-recent-post .post-content {
+  font-size: 11px;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 75%; }
+
+.tag-wrapper a {
+  display: inline-block;
+  padding: 3px 11px;
+  margin: 0 0 10px 10px;
+  color: #fff;
+  font-size: 10px;
+  background-color: #ababab;
+  border-radius: 3px; }
+  .tag-wrapper a:hover {
+    color: #f4793d;
+    background-color: #d1d1d1; }

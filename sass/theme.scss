@@ -62,6 +62,10 @@ a {
 	background-color: #363636;
 	padding: 20px 0;
 
+	.menu {
+		display: inline-block;
+	}
+
 	.menu-item {
 		padding-right: 60px;
 		font-size: 12px;
@@ -111,60 +115,62 @@ a {
 
 // Post CSS
 
-.post {
-	background-color: #fff;
-	border: 1px solid darken($theme_bg_color, 6%);
-	margin-bottom: 45px;
-}
-
-.post-header {
-
-	a {
-		color:#3c3c3c;
-
-		&:hover {
-			color: $primary-color;
-		}
-	}
-}
-
-.post-image {
-	max-height: 400px;
-	overflow: hidden;
-
-	a {
-		display: block;
+.container {
+	.post {
+		background-color: #fff;
+		border: 1px solid darken($theme_bg_color, 6%);
+		margin-bottom: 45px;
 	}
 
-	img {
-		max-width: 100%;
-		display: block;
-	}
-}
+	.post-header {
 
-.post-meta {
+		a {
+			color:#3c3c3c;
 
-	span {
-		padding-left: 20px;
-		display: inline-block;
-
-		&:last-child {
-			padding-left: 0;
+			&:hover {
+				color: $primary-color;
+			}
 		}
 	}
 
-	a {
-		color: #c1c0c0;
-		font-size: 11px;
+	.post-image {
+		max-height: 400px;
+		overflow: hidden;
 
-		&:hover {
-			color: $primary-color;
+		a {
+			display: inline-block;
+		}
+
+		img {
+			max-width: 100%;
+			// display: block;
 		}
 	}
-}
 
-.post-content {
-	padding: 45px 50px;
+	.post-meta {
+
+		span {
+			padding-left: 20px;
+			display: inline-block;
+
+			&:last-child {
+				padding-left: 0;
+			}
+		}
+
+		a {
+			color: #c1c0c0;
+			font-size: 11px;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	.post-content {
+		padding: 45px 50px;
+	}
 }
 
 .main-content {
@@ -185,6 +191,7 @@ a {
 		}
 	}
 }
+
 
 // Sidebar CSS
 
@@ -243,5 +250,55 @@ a {
 
 	.number {
 		float: left;
+	}
+}
+
+.widget-recent-post {
+
+	a {
+		display: inline-block;
+    	color: #9a9a9a;
+
+    	&:hover {
+    		color: $primary-color;
+    	}
+	}
+
+	.post {
+		border: 0 none;
+		margin-bottom: 5px;
+	}
+
+	.post-image {
+		padding-left: 20px;
+		box-sizing: border-box;
+		max-width: 20%;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.post-content {
+		font-size: 11px;
+		display: inline-block;
+		vertical-align: top;
+		max-width: 75%;
+	}
+}
+
+.tag-wrapper {
+
+	a {
+		display: inline-block;
+		padding: 3px 11px;
+		margin: 0 0 10px 10px;
+		color: #fff;
+		font-size: 10px;
+		background-color: #ababab;
+		border-radius: 3px;
+
+		&:hover {
+			color: $primary-color;
+			background-color: lighten(#ababab, 15%);
+		}
 	}
 }

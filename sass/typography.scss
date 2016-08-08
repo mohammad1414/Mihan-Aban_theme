@@ -6,6 +6,34 @@
 }
 
 
+// Font-icon
+@font-face {
+  font-family: 'mihan-theme-icons';
+  src: url('../font/fonticon/font/fontello.eot?82035505');
+  src: url('../font/fonticon/font/fontello.eot?82035505#iefix') format('embedded-opentype'),
+       url('../font/fonticon/font/fontello.svg?82035505#fontello') format('svg'),
+       url('../font/fonticon/font/fontello.woff?82035505') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'mihan-theme-icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+}
+
+
 // Heading
 
 // h1 {
@@ -18,6 +46,10 @@
 		font-size: 17px;
 	}
 }
+
+// .icon {
+// 	font-family: 'mihan-theme-icons';
+// }
 
 p {
 	font-size: 12px;

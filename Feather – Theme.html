@@ -2,228 +2,260 @@
 <html lang="fa">
 <head>
 	<meta charset="utf-8">
-	<title>Flatize - Shop HTML5 Responsive Template</title>
+  <title>[cb:blog_page_title]</title>
+  <base href="[cb:blog_address]" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="fa">
+  <meta name="description" content="[cb:blog_meta_description]" />
+  <meta name="keywords" content="[cb:blog_meta_keywords]" />
+  
+  <link rel="alternate" type="application/rss+xml" title="[cb:blog_title]" 
+    href="[cb:blog_rss_href]" />
+  <link rel="alternate" type="application/atom+xml" title="[cb:blog_title]" 
+    href="[cb:blog_atom_href]" />
 	<link href="css/theme.css" rel="stylesheet">
+
+	<style>
+
+	</style>
+
 </head>
 <body class="blog">
 	<div id="page">
 
 		<header class="header">
 			<div class="wrapper clearfix">
-				<div class="logo"><a href="#"><img src="img/aban-logo.png"></a></div>
+				<div class="logo"><a href="#">[cb:blog_logo]</a></div>
 				<div class="menu">
 					<ul class="nav_menu">
-						<li class="menu-item right"><a class="menu-item-link" href="#">لینک اول</a></li>
-						<li class="menu-item right"><a class="menu-item-link" href="#">لینک دوم</a></li>
-						<li class="menu-item right"><a class="menu-item-link" href="#">لینک سوم</a></li>
-						<li class="menu-item right"><a class="menu-item-link" href="#">لینک چهارم</a></li>
+						<cb:block_extrapage>
+					      <li class="menu-item right">
+					         <cb:loop_extrapage>     	
+					               <a class="menu-item-link" href="[cb:extrapage_href]">[cb:extrapage_title]</a><br/>
+					         </cb:loop_extrapage>      	
+					      </li>	
+					  	</cb:block_extrapage>  
 					</ul>
 				</div>
-				<form class="search left" action="http://feather.axathemes.com/">
-	                <input type="text" class="search" placeholder="جست و جو...">
-	                <input type="submit" class="submit" value="">
-				</form>
+				<div class="search-wrapper">
+                    <cb:block_search>
+                        <input type="text" name="search_text" class="keyword" placeholder="جستجو..." />
+                        <div class="search icon-search"><input type="submit" value="" /></div>
+                    </cb:block_search>
+                </div>
 			</div>
 		</header>
 
 		<div class="content wrapper">
 			<div class="container">
-				<div class="post post-1">
-					<div class="post-image">
-					    <a href="#">
-					    	<img src="img/post-1.jpg">
-					    </a>
-					</div>
-                    <div class="post-content">
-                    	<div class="post-content-inner-wrapper">
-                    		<div class="post-inner-content">
-                        		<h2 class="post-header">
-                        			<a href="#">آسمان بار امانت نتوانست کشید</a>
-                    			</h2>
-                                <div class="post-meta">
-                                    <span class="date-span">
-	                                    <i class="fa fa-lg fa-clock-o"></i>
-	                                    <a href="#">01 25, 2016</a>
-                                    </span>
+				<cb:block_post>
+                    <cb:loop_post>
+						<div class="post">
+							<!-- <div class="post-image">
+							    <a href="#">
+							    	<img src="img/post-1.jpg">
+							    </a>
+							</div> -->
+		                    <div class="post-content">
+		                    	<div class="post-content-inner-wrapper">
+		                    		<div class="post-inner-content">
+		                        		<h2 class="post-header">
+                                  			<a href="[cb:post_href]">[cb:post_title]</a>
+		                    			</h2>
+		                                <div class="post-meta">
+		                                    <span class="date-span">
+			                                    <i class="fa fa-lg fa-clock-o"></i>
+			                                    <a href="#">[cb:post_edit_date]</a>
+		                                    </span>
 
-                                    <span class="comments-span">
-	                                    <i class="fa fa-lg fa-comments"></i>
-	                                    <a href="#">بدون نظر</a>
-                                    </span>
+		                                    <span class="comments-span">
+			                                    <i class="fa fa-lg fa-comments"></i>
+			                                    <a href="#">[cb:post_comment_count]</a>
+		                                    </span>
 
-                                    <span class="share-post-span share-post">
-	                                    <i class="fa fa-lg fa-share"></i>
-	                                    <a href="#" class="share-text">اشتراک</a>
-										<div class="share-box">
-											<div class="social-icons">
-								                <a target="_blank" name="fb_share" class="facebook" type="button" href="#"></a>
-								                <a target="_blank" href=""></a>
-
-								                <a target="_blank" href=""></a>
-								                <a target="_blank" href="" class="google"></a>
-				        					</div>
-			        					</div>
-	        						</span>                       
-                                </div>
-								<div class="main-content">
-									 <p>“آنکس که بداند و بداند که بداند + اسب شرف از گنبد گردون بجهاند ”
-										“و آنکس که نداند و نداند که نداند - لطفا - بیدارش نمائید که بس خفته نماند”
-										با پوزش از روانشاد شاعر گرامی، یادآور میشوم که این قطعه مرکب از چهار بیت است. دو بیت میانی را - به آن صورت که هست - مناسب این مقال ندانستم. و نیز جایز نمیدانم که در این عصر دانش و بیداری، نادان را رها کنیم تا ” در جهل مرکب ابدالدهر بماند”. همه با هم بکوشیم تا نادانی را از جوامع انسانی ریشه کن کنیم. امروز دیگر ندانستن، پدیده ای بیرون از شوون انسانیت است؛ خطاست؛ خیانت به دانش و بی اعتنایی و اهانت به دانشمندان است.
-										“و گر بینی که نابینا و چاه است + اگر خاموش بنشینی،گناه است”
-									</p>
-									<p>“آنکس که بداند و بداند که بداند + اسب شرف از گنبد گردون بجهاند ”
-										“و آنکس که نداند و نداند که نداند - لطفا - بیدارش نمائید که بس خفته نماند”
-										با پوزش از روانشاد شاعر گرامی، یادآور میشوم که این قطعه مرکب از چهار بیت است. دو بیت میانی را - به آن صورت که هست - مناسب این مقال ندانستم. و نیز جایز نمیدانم که در این عصر دانش و بیداری، نادان را رها کنیم تا ” در جهل مرکب ابدالدهر بماند”. همه با هم بکوشیم تا نادانی را از جوامع انسانی ریشه کن کنیم. امروز دیگر ندانستن، پدیده ای بیرون از شوون انسانیت است؛ خطاست؛ خیانت به دانش و بی اعتنایی و اهانت به دانشمندان است.
-										“و گر بینی که نابینا و چاه است + اگر خاموش بنشینی،گناه است”
-									</p>
-									<div class="readmore">
-										<a href="#">ادامه مظلب</a>
-									</div>
-	                            </div>
-                            </div>
-                        </div>
-                	</div>
-               	</div>
-
-				<div class="post post-2">
-					<div class="post-image">
-					    <a href="#">
-					    	<img src="img/post-1.jpg">
-					    </a>
-					</div>
-                    <div class="post-content">
-                    	<div class="post-content-inner-wrapper">
-                    		<div class="post-inner-content">
-                        		<h2 class="post-header">
-                        			<a href="#">آسمان بار امانت نتوانست کشید</a>
-                    			</h2>
-                                <div class="post-meta">
-                                    <span class="date-span">
-	                                    <i class="fa fa-lg fa-clock-o"></i>
-	                                    <a href="#">01 25, 2016</a>
-                                    </span>
-
-                                    <span class="comments-span">
-	                                    <i class="fa fa-lg fa-comments"></i>
-	                                    <a href="#">بدون نظر</a>
-                                    </span>
-
-                                    <span class="share-post-span share-post">
-	                                    <i class="fa fa-lg fa-share"></i>
-	                                    <a href="#" class="share-text">اشتراک</a>
-										<div class="share-box">
-											<div class="social-icons">
-								                <a target="_blank" name="fb_share" class="facebook" type="button" href="#"></a>
-								                <a target="_blank" href=""></a>
-
-								                <a target="_blank" href=""></a>
-								                <a target="_blank" href="" class="google"></a>
-				        					</div>
-			        					</div>
-	        						</span>                       
-                                </div>
-								<div class="main-content">
-									 <p>“آنکس که بداند و بداند که بداند + اسب شرف از گنبد گردون بجهاند ”
-										“و آنکس که نداند و نداند که نداند - لطفا - بیدارش نمائید که بس خفته نماند”
-										با پوزش از روانشاد شاعر گرامی، یادآور میشوم که این قطعه مرکب از چهار بیت است. دو بیت میانی را - به آن صورت که هست - مناسب این مقال ندانستم. و نیز جایز نمیدانم که در این عصر دانش و بیداری، نادان را رها کنیم تا ” در جهل مرکب ابدالدهر بماند”. همه با هم بکوشیم تا نادانی را از جوامع انسانی ریشه کن کنیم. امروز دیگر ندانستن، پدیده ای بیرون از شوون انسانیت است؛ خطاست؛ خیانت به دانش و بی اعتنایی و اهانت به دانشمندان است.
-										“و گر بینی که نابینا و چاه است + اگر خاموش بنشینی،گناه است”
-									</p>
-									<div class="readmore">
-										<a href="#">ادامه مظلب</a>
-									</div>
-	                            </div>
-                            </div>
-                        </div>
-                	</div>
-               	</div>
+		                                    <span class="share-post-span share-post">
+			                                    <i class="fa fa-lg fa-share"></i>
+			                                    <a href="#" class="share-text">اشتراک</a>
+												<div class="share-box">
+													<div class="social-icons">
+														<a target="_blank" class="twitter" href="https://twitter.com/home?status=[cb:post_title]"><i class="icon icon-twitter"></i>twitter</a>
+														<a target="_blank" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=[cb:post_title]"><i class="icon icon-facebook"></i>facebook</a>
+														<a target="_blank" class="gplus" href="https://plus.google.com/share?url=[cb:post_title]"><i class="icon icon-gplus"></i>gplus</a>
+				        							</div>
+					        					</div>
+			        						</span>                       
+		                                </div>
+										<div class="main-content">
+											 [cb:post_body1]
+                               				 [cb:post_body2]
+											<div class="readmore">
+												<a href="[cb:post_href]">ادامه مطلب</a>
+											</div>
+			                            </div>
+		                            </div>
+		                        </div>
+		                	</div>
+		               	</div>
+                    </cb:loop_post>
+               	</cb:block_post>
 			</div>
-			<div class="sidebar">
-				<div class="widget widget-about">
-					<div class="author-info-container"><div class="image"><img src="img/personal.jpg"></div></div>
-					<div class="widget-content">
-						<h3 class="widget-title">میهن بلاگ</h3>
-						<p class="about-text">طرح و انتشار عقاید، ایده ها، افکار و اندیشه ها،مقالات و دیدگاههای شخصي از جمله تمایلات هر شخص می باشدكه در فضای اینترنت این امر با حداقل هزینه صورت می پذیرد . محلی که بعنوان جایگاه انتشار این عقاید و نظرات وجود دارد، وبلاگ ناميده ميشود. پدیده وبلاگ و وبلاگ نویسی که امروزه در جهان و از جمله کشورما ایران رواج فراوان یافته است می تواند علاوه بر بیان نظرات و دیده گاههای شخصی افراد، موجبات تبادل دانش و اطلاعات سایر مراجعه کنندگان به اینترنت را فراهم می آورد.</p>
-					</div>
+			<div class="sidebar-wrapper">
+
+				<div class="section weblog-name">
+					<h3 class="widget-title">[cb:blog_title]</h3>			
+					<div class="wifget-content"><p>[cb:blog_slogan]</p></div>
 				</div>
 
-				<div class="widget widget-cat">
-					<div class="widget-content">
+				<div class="section sidebar">
+					<div class="widget widget-about">
+						<div class="author-info-container">
+							<cb:block_author>
+	          					<cb:loop_author>
+						            <div class="author-image">[cb:author_photo_small]</div>
+						            <div class="author-name">[cb:author_name]</div>
+						            <div class="author-about"><p>[cb:author_about_me]</p></div>
+					            </cb:loop_author>
+							</cb:block_author>
+	          			</div>
+					</div>
+
+					<div class="widget widget-authors">
+						<h3 class="widget-title">نویسندگان</h3>
+						<div class="widget-content">
+							<cb:block_author>
+								<ul>
+									<cb:loop_author>
+										<li class="cat-item clearfix">
+											<a href="[cb:author_href]">[cb:author_name]<span class="number">[cb:author_post_count]</span></a>
+										</li>
+									</cb:loop_author>
+								</ul>
+							</cb:block_author>
+						</div>
+					</div>
+
+					<div class="widget widget-stat">
+						<h3 class="widget-title">آمار وبلاگ</h3>
+						<div class="widget-content">
+							<cb:block_stat>
+								<p>
+									کل بازدید:[cb:stat_total_view]<br/>
+									بازدید امروز :[cb:stat_today_view]<br/>
+									بازدید دیروز : [cb:stat_yesterday_view]<br/>
+									بازدید این ماه : [cb:stat_this_month_view]<br/>
+									بازدید ماه قبل : [cb:stat_last_month_view]<br/>
+									تعداد نویسندگان : [cb:stat_total_author]<br/>
+									تعداد کل مطالب : [cb:stat_total_post]<br/>
+									آخرین بازدید : [cb:stat_last_view_date]<br/>
+									آخرین بروز رسانی : [cb:stat_modify_date]<br/>
+								</p>
+							</cb:block_stat>
+						</div>
+					</div>
+
+					<div class="widget widget-archive-cat">
 						<h3 class="widget-title">آرشیو موضوعی</h3>
-						<div class="cats-widget">
-							<ul>
-								<li class="cat-item clearfix"><a href="">قهرمان من<span class="number">6</span></a></li>
-								<li class="cat-item clearfix"><a href="">نرم‌افزار موبایل <span class="number">2</span></a></li>
-								<li class="cat-item clearfix"><a href="">دستور العمل ها <span class="number">1</span></a></li>
-								<li class="cat-item clearfix"><a href="">منِ امروز، ١٠سال قبل <span class="number">6</span></a></li>
-								<li class="cat-item clearfix"><a href="">عمومی <span class="number">3</span></a></li>
-							</ul>
+						<div class="widget-content">
+							<cb:block_blog_category>
+								<ul>
+									<cb:loop_blog_category>
+										<li class="cat-item clearfix">
+											<a href="[cb:blog_category_href]"> [cb:blog_category_name]<span class="number">[cb:blog_category_post_count]</span></a>
+										</li>
+									 </cb:loop_blog_category>
+								</ul>
+							 </cb:block_blog_category>
 						</div>
 					</div>
-				</div>
 
-				<div class="widget widget-recent-post">
-					<div class="widget-content">
+					<div class="widget widget-archive">
+						<h3 class="widget-title">آرشیو</h3>
+						<div class="widget-content">
+							<cb:block_blog_archive>
+								<ul>
+									<cb:loop_blog_archive>
+										<li class="cat-item">
+											<a href="[cb:blog_archive_href]"> [cb:blog_archive_text]</a>
+										</li>
+									 </cb:loop_blog_archive>
+									 <li class="cat-item last"><a href="[cb:blog_archive_full_list_href]">همه آرشیوها</a></li>
+								</ul>
+							</cb:block_blog_archive>
+						</div>
+					</div>
+
+					<div class="widget widget-linkestan">
+						<h3 class="widget-title">لینکستان</h3>
+						<div class="widget-content">
+							<cb:block_link>
+								<ul>
+									<cb:loop_link>
+										<li class="cat-item">
+											<a href="[cb:link_href]" title="[cb:link_title]" target="_blank"> [cb:link_text]</a>
+										</li>
+									 </cb:loop_link>
+									 <li class="cat-item last"><a href="[cb:link_full_list_href]">همه لینکها</a></li>
+								</ul>
+							</cb:block_link>
+						</div>
+					</div>
+
+
+
+					<div class="widget widget-linkestan">
+						<h3 class="widget-title">لینکدونی</h3>
+						<div class="widget-content">
+							<cb:block_linkdaily>
+								<ul>
+									<cb:loop_linkdaily> 
+										<li class="cat-item">
+											<a href="[cb:linkdaily_href]" title="[cb:linkdaily_title]" target="_blank">[cb:linkdaily_text]</a>
+										</li>
+									 </cb:loop_linkdaily>
+									 <li class="cat-item"><a href="[cb:linkdaily_full_list_href]">همه لینکها</a></li>
+									 <li class="cat-item last"><a href="[cb:linkdaily_new_href]">ارسال لینک</a></li>
+								</ul>
+							</cb:block_linkdaily>
+						</div>
+					</div>
+
+					<div class="widget widget-recent-post">
 						<h3 class="widget-title">آخرین مطالب</h3>
-						<div class="recent-post-wrapper">
-							<div class="post">
-                          		<div class="post-image">
-                          			<a href="#">
-                          				<img width="60" height="60" src="img/post-1.jpg" class="post_thumb-img">
-                      				</a>
-                      			</div>
-	                          	<div class="post-content">
-	                          		<span class="date">25 Jan , 2016</span><br>
-	                          		<a href="#">
-		                          		سر فرا گوش من اورد به اواز حزین
-	                          		</a>
-								</div>
-							</div>
-							<div class="post">
-                          		<div class="post-image">
-                          			<a href="#">
-                          				<img width="60" height="60" src="img/post-1.jpg" class="post_thumb-img">
-                      				</a>
-                      			</div>
-	                          	<div class="post-content">
-	                          		<span class="date">25 Jan , 2016</span><br>
-	                          		<a href="#">
-		                          		سر فرا گوش من اورد به اواز حزین
-	                          		</a>
-								</div>
-							</div>
-							<div class="post">
-                          		<div class="post-image">
-                          			<a href="#">
-                          				<img width="60" height="60" src="img/post-1.jpg" class="post_thumb-img">
-                      				</a>
-                      			</div>
-	                          	<div class="post-content">
-	                          		<span class="date">25 Jan , 2016</span><br>
-	                          		<a href="#">
-		                          		سر فرا گوش من اورد به اواز حزین
-	                          		</a>
-								</div>
-							</div>
+						<div class=" widget-content">
+							<cb:block_blog_recent_post>
+								<cb:loop_blog_recent_post>
+									<div class="post">
+			                      		<!-- <div class="post-image">
+			                      			<a href="[cb:blog_recent_post_href]">
+			                      				<img width="60" height="60" src="img/post-1.jpg" class="post_thumb-img">
+			                  				</a>
+			                  			</div> -->
+			                          	<div class="post-content">
+			                          		<a href="[cb:blog_recent_post_href]">
+				                          		[cb:blog_recent_post_text]<br>
+			                          		<span class="date">[cb:blog_recent_post_date]</span>
+			                          		</a>
+										</div>
+									</div>
+								</cb:loop_blog_recent_post>
+							</cb:block_blog_recent_post>
+							<div class="all-post"><p><a href="[cb:blog_recent_post_full_list_href]">همه مطالب ارسالی</a></p></div>
 						</div>
 					</div>
-				</div>
-				
-				<div class="widget">
-					<div class="widget-content">
+					
+					<div class="widget widget-tags">
 						<div class="widget-title">ابر برچسب</div>
-						<div class="tag-wrapper">
-							<a href="#" class="tag-link-13">قالب</a>
-							<a href="#" class="tag-link-13">میهن</a>
-							<a href="#" class="tag-link-13">وبلاگ</a>
-							<a href="#" class="tag-link-13">تست</a>
-							<a href="#" class="tag-link-13">کار</a>
-							<a href="#" class="tag-link-13">زندگی</a>
-							<a href="#" class="tag-link-13">درس</a>
-							<a href="#" class="tag-link-13">موسیقی</a>
+						<div class="widget-content">
+							<cb:block_blog_tag_cloud>
+								<div class="tag-wrapper">
+									<cb:loop_blog_tag_cloud>
+										<a href="[cb:blog_tag_cloud_href]" class="tag-link">[cb:blog_tag_cloud_text]</a>
+									</cb:loop_blog_tag_cloud>
+								</div>
+							</cb:block_blog_tag_cloud>
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>

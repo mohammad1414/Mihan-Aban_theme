@@ -84,7 +84,7 @@ input,
 textarea {
   background-color: #f2f2f2;
   direction: rtl;
-  font-family: 'Iransans'; }
+  font-family: 'Mihan-Iransans', tahoma, arial; }
 
 body,
 ul,
@@ -128,6 +128,9 @@ a {
 .header {
   background-color: #363636;
   padding: 20px 0; }
+  .header .right-action {
+    display: inline-block;
+    width: 66%; }
   .header .menu {
     display: inline-block; }
   .header .menu-item {
@@ -148,12 +151,16 @@ a {
     .header .logo img {
       width: 100%; }
   .header .search-wrapper {
-    float: left;
-    position: relative; }
+    position: relative;
+    display: inline-block;
+    width: 33%; }
     .header .search-wrapper .keyword {
-      padding: 10px;
+      padding: 5px 10px 5px 29px;
       border-radius: 3px;
-      border: 0 none; }
+      border: 0 none;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      box-sizing: border-box; }
     .header .search-wrapper .search:before {
       left: 1px;
       top: 6px;
@@ -211,7 +218,7 @@ a {
     color: #f4793d; }
 
 .container .post-content {
-  padding: 45px 50px; }
+  padding: 30px 25px; }
 
 .main-content {
   color: #636467;
@@ -311,6 +318,18 @@ a {
   border-top: 1px solid #e9e9e9;
   padding-top: 25px; }
 
+.comment_date {
+  font-size: 11px;
+  color: #9a9a9a; }
+
+.comment_row {
+  margin-bottom: 15px; }
+  .comment_row:last-child {
+    border-bottom: 1px solid #e9e9e9; }
+
+.comment_body {
+  font-size: 13px; }
+
 .comment_form .comment_form_row {
   margin-bottom: 15px; }
   .comment_form .comment_form_row #showsmile {
@@ -340,7 +359,7 @@ a {
 .comment_form div.controls {
   text-align: right; }
   .comment_form div.controls .btn {
-    font-family: 'Iransans';
+    font-family: 'Mihan-Iransans', tahoma, arial;
     background-color: #f4793d;
     border-radius: 3px;
     color: #fff;
@@ -368,18 +387,21 @@ a {
     .header .logo {
       display: block;
       margin-left: 0; }
+    .header .right-action {
+      display: block;
+      width: 100%; }
     .header .menu {
       padding: 10px 0; }
     .header .search-wrapper {
-      float: none; }
+      float: none;
+      width: 90%; }
       .header .search-wrapper input {
-        width: 60%; } }
+        width: 100%;
+        box-sizing: border-box; } }
 
 
 
-
-
-</style>
+	</style>
 
 
 </head>
@@ -388,17 +410,19 @@ a {
 
 		<header class="header">
 			<div class="wrapper clearfix">
-				<div class="logo"><a href="#">[cb:blog_logo]</a></div>
-				<div class="menu">
-					<ul class="nav_menu">
-						<cb:block_extrapage>
-					      <li class="menu-item right">
-					         <cb:loop_extrapage>     	
-					               <a class="menu-item-link" href="[cb:extrapage_href]">[cb:extrapage_title]</a><br/>
-					         </cb:loop_extrapage>      	
-					      </li>	
-					  	</cb:block_extrapage>  
-					</ul>
+				<div class="right-action">
+					<div class="logo"><a href="#">[cb:blog_logo]</a></div>
+					<div class="menu">
+						<ul class="nav_menu">
+							<cb:block_extrapage>
+						      <li class="menu-item right">
+						         <cb:loop_extrapage>     	
+						               <a class="menu-item-link" href="[cb:extrapage_href]">[cb:extrapage_title]</a><br/>
+						         </cb:loop_extrapage>      	
+						      </li>	
+						  	</cb:block_extrapage>  
+						</ul>
+					</div>
 				</div>
 				<div class="search-wrapper">
                     <cb:block_search>

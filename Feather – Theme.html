@@ -16,8 +16,371 @@
 	<link href="css/theme.css" rel="stylesheet">
 
 	<style>
+@font-face {
+  font-family: 'Iransans';
+  src: url("font/IRANSans-Medium-web.woff") format("woff");
+  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 400; }
 
-	</style>
+@font-face {
+  font-family: 'mihan-theme-icons';
+  src: url("../font/fonticon/font/fontello.eot?82035505");
+  src: url("../font/fonticon/font/fontello.eot?82035505#iefix") format("embedded-opentype"), url("../font/fonticon/font/fontello.svg?82035505#fontello") format("svg"), url("../font/fonticon/font/fontello.woff?82035505") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'mihan-theme-icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em; }
+
+.blog h2 {
+  font-size: 17px; }
+
+p {
+  font-size: 12px;
+  margin-bottom: 20px;
+  line-height: 1.8; }
+
+.icon-search:before {
+  content: '\e800'; }
+
+.icon-angle-down:before {
+  content: '\e801'; }
+
+.icon-angle-left:before {
+  content: '\e802'; }
+
+.icon-angle-right:before {
+  content: '\e803'; }
+
+.icon-angle-up:before {
+  content: '\e804'; }
+
+.icon-clock:before {
+  content: '\e805'; }
+
+.icon-pencil:before {
+  content: '\e806'; }
+
+.icon-rss:before {
+  content: '\f09e'; }
+
+.icon-info:before {
+  content: '\f129'; }
+
+body,
+input,
+textarea {
+  background-color: #f2f2f2;
+  direction: rtl;
+  font-family: 'Iransans'; }
+
+body,
+ul,
+a,
+div,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  transition: 300ms ease-out;
+  transition-property: opacity, background-color, color; }
+  a:hover {
+    color: #f4793d; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.header {
+  background-color: #363636;
+  padding: 20px 0; }
+  .header .menu {
+    display: inline-block; }
+  .header .menu-item {
+    padding-right: 60px;
+    font-size: 12px; }
+    .header .menu-item:first-child {
+      padding-right: 0; }
+    .header .menu-item .menu-item-link {
+      color: #fff; }
+      .header .menu-item .menu-item-link:hover {
+        color: #f4793d; }
+  .header .logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px; }
+    .header .logo a {
+      display: inline-block; }
+    .header .logo img {
+      width: 100%; }
+  .header .search-wrapper {
+    float: left;
+    position: relative; }
+    .header .search-wrapper .keyword {
+      padding: 10px;
+      border-radius: 3px;
+      border: 0 none; }
+    .header .search-wrapper .search:before {
+      left: 1px;
+      top: 6px;
+      position: absolute;
+      color: #000; }
+    .header .search-wrapper .search input {
+      left: 1px;
+      top: 3px;
+      cursor: pointer;
+      position: absolute;
+      border: 0 none;
+      background: transparent; }
+
+.container {
+  width: 67%;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 25px;
+  box-sizing: border-box;
+  max-width: 100%; }
+  .container img {
+    max-width: 100%; }
+
+.content {
+  padding: 55px 20px; }
+
+.container .post {
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  margin-bottom: 45px; }
+
+.container .post-header a {
+  color: #3c3c3c; }
+  .container .post-header a:hover {
+    color: #f4793d; }
+
+.container .post-image {
+  max-height: 400px;
+  overflow: hidden; }
+  .container .post-image a {
+    display: inline-block; }
+  .container .post-image img {
+    max-width: 100%; }
+
+.container .post-meta span {
+  padding-left: 20px;
+  display: inline-block; }
+  .container .post-meta span:last-child {
+    padding-left: 0; }
+
+.container .post-meta a {
+  color: #c1c0c0;
+  font-size: 11px; }
+  .container .post-meta a:hover {
+    color: #f4793d; }
+
+.container .post-content {
+  padding: 45px 50px; }
+
+.main-content {
+  color: #636467;
+  margin-bottom: 25px; }
+
+.readmore a {
+  background-color: #f4793d;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
+  padding: 7px 17px; }
+  .readmore a:hover {
+    background-color: #f0580e; }
+
+.sidebar-wrapper {
+  width: 32%;
+  display: inline-block; }
+  .sidebar-wrapper .section {
+    padding: 50px 30px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3; }
+
+.sidebar p {
+  color: #9a9a9a; }
+
+.weblog-name {
+  margin-bottom: 20px; }
+
+.widget {
+  margin-bottom: 45px; }
+  .widget .widget-title {
+    font-size: 13px;
+    margin-bottom: 10px; }
+  .widget .number {
+    float: left; }
+  .widget .cat-item {
+    font-size: 12px;
+    border-bottom: 1px solid #ededed; }
+    .widget .cat-item.last {
+      border-bottom: 0 none; }
+    .widget .cat-item a {
+      display: block;
+      padding: 12px;
+      color: #9a9a9a; }
+      .widget .cat-item a:hover {
+        background-color: #ededed;
+        color: #f4793d; }
+
+.widget-about {
+  text-align: center; }
+  .widget-about .about-text {
+    margin: 0; }
+  .widget-about .author-image img {
+    border-radius: 50%;
+    width: auto !important; }
+
+.widget-recent-post a {
+  display: block;
+  color: #9a9a9a; }
+  .widget-recent-post a:hover {
+    color: #f4793d; }
+
+.widget-recent-post .post {
+  border: 0 none;
+  margin-bottom: 5px; }
+
+.widget-recent-post .post-image {
+  padding-left: 20px;
+  box-sizing: border-box;
+  max-width: 20%;
+  display: inline-block;
+  vertical-align: top; }
+
+.widget-recent-post .post-content {
+  font-size: 11px;
+  vertical-align: top;
+  border-bottom: 1px solid #ededed;
+  padding: 8px 0; }
+
+.tag-wrapper a {
+  display: inline-block;
+  padding: 3px 11px;
+  margin: 0 0 10px 10px;
+  color: #fff;
+  font-size: 10px;
+  background-color: #ababab;
+  border-radius: 3px; }
+  .tag-wrapper a:hover {
+    color: #f4793d;
+    background-color: #d1d1d1; }
+
+.comment_title_stable {
+  margin-bottom: 20px; }
+
+.comment_list {
+  border-top: 1px solid #e9e9e9;
+  padding-top: 25px; }
+
+.comment_form .comment_form_row {
+  margin-bottom: 15px; }
+  .comment_form .comment_form_row #showsmile {
+    display: none; }
+  .comment_form .comment_form_row input,
+  .comment_form .comment_form_row textarea {
+    border: none;
+    background: #ededed;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 90%;
+    border-radius: 3px; }
+  .comment_form .comment_form_row input[type="checkbox"] {
+    width: auto; }
+  .comment_form .comment_form_row label {
+    width: auto;
+    display: block;
+    font-size: 14px;
+    float: none; }
+
+.comment_form .msgtitle,
+.comment_form .msgbody {
+  display: block;
+  float: none;
+  width: auto; }
+
+.comment_form div.controls {
+  text-align: right; }
+  .comment_form div.controls .btn {
+    font-family: 'Iransans';
+    background-color: #f4793d;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    padding: 7px 17px;
+    border: 0 none; }
+    .comment_form div.controls .btn:hover {
+      background-color: #f0580e; }
+
+@media (min-width: 0) and (max-width: 750px) {
+  .container {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 235px; }
+  .section.weblog-name {
+    position: absolute;
+    top: 1%;
+    width: 92%; }
+  .content {
+    position: relative; }
+  .sidebar-wrapper {
+    width: 100%; }
+  .header {
+    text-align: center; }
+    .header .logo {
+      display: block;
+      margin-left: 0; }
+    .header .menu {
+      padding: 10px 0; }
+    .header .search-wrapper {
+      float: none; }
+      .header .search-wrapper input {
+        width: 60%; } }
+
+
+
+
+
+</style>
+
 
 </head>
 <body class="blog">
@@ -88,12 +451,51 @@
 										<div class="main-content">
 											 [cb:post_body1]
                                				 [cb:post_body2]
-											<div class="readmore">
-												<a href="[cb:post_href]">ادامه مطلب</a>
-											</div>
 			                            </div>
+											<div class="readmore">
+												<!-- <a href="[cb:post_href]">ادامه مطلب</a> -->
+												<div class="post__like">[cb:post_like]</div>
+				                                <div class="post__more">[cb:post_continue_link]</div>
+				                                <!-- <a href="[cb:post_comment_href_onpage]" class="comment_footer">
+				                                 <span>تعداد نظرات:</span>
+				                                    [cb:post_comment_count] 
+				                                </a> -->
+											</div>
 		                            </div>
 		                        </div>
+			                	<!-- Comments -->
+	                            <cb:block_post_comment>
+	                                <div class="comment_list clearfix">
+	                                    <h2 class="comment_title_stable custom_font">ارسال نظر:</h2>
+	                                    <cb:loop_post_comment>
+	                                        <div class="comment_row">
+	                                            <div class="comment_sender">
+	                                                <a href="[cb:post_comment_senderweb]" target="_blank">
+	                                                    [cb:post_comment_sendername]
+	                                                </a> 
+	                                                <span class="comment_date">
+	                                                 [cb:post_comment_date]
+	                                                </span>
+	                                            </div>
+
+	                                            <div class="comment_list_body">
+	                                                <div class="comment_body">
+	                                                    [cb:post_comment_body]
+	                                                </div>
+	                                                    [cb:post_comment_replystart]
+	                                                    <div class="comment_replay">
+	                                                        <div>
+	                                                            <i>[cb:post_comment_replyname]</i>: [cb:post_comment_replybody]
+	                                                        </div>
+	                                                    </div>
+	                                                    [cb:post_comment_replyend]
+	                                            </div>
+	                                        </div>
+	                                    </cb:loop_post_comment>
+	                                    <div class="comment_form_wrapp">[cb:post_comment_form]</div>
+	                                </div>
+	                            </cb:block_post_comment>
+	                            <!-- Comments  -->
 		                	</div>
 		               	</div>
                     </cb:loop_post>

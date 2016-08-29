@@ -446,9 +446,9 @@ a {
 		                    <div class="post-content">
 		                    	<div class="post-content-inner-wrapper">
 		                    		<div class="post-inner-content">
-		                        		<h2 class="post-header">
+		                        		<[cb:post_title_tag] class="post-header">
                                   			<a href="[cb:post_href]">[cb:post_title]</a>
-		                    			</h2>
+		                    			   </[cb:post_title_tag]>
 		                                <div class="post-meta">
 		                                    <span class="date-span">
 			                                    <i class="fa fa-lg fa-clock-o"></i>
@@ -579,10 +579,10 @@ a {
 						</div>
 					</div>
 
-					<div class="widget widget-archive-cat">
-						<h3 class="widget-title">آرشیو موضوعی</h3>
-						<div class="widget-content">
-							<cb:block_blog_category>
+          <cb:block_blog_category>
+  					<div class="widget widget-archive-cat">
+  						<h3 class="widget-title">آرشیو موضوعی</h3>
+  						<div class="widget-content">
 								<ul>
 									<cb:loop_blog_category>
 										<li class="cat-item clearfix">
@@ -590,9 +590,9 @@ a {
 										</li>
 									 </cb:loop_blog_category>
 								</ul>
-							 </cb:block_blog_category>
-						</div>
-					</div>
+  						</div>
+  					</div>
+          </cb:block_blog_category>
 
 					<div class="widget widget-archive">
 						<h3 class="widget-title">آرشیو</h3>

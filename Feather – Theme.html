@@ -5,6 +5,7 @@
   <title>[cb:blog_page_title]</title>
   <base href="[cb:blog_address]" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/jquery.min.js"></script>
   <meta http-equiv="Content-Language" content="fa">
   <meta name="description" content="[cb:blog_meta_description]" />
   <meta name="keywords" content="[cb:blog_meta_keywords]" />
@@ -406,6 +407,12 @@ a {
 
 </head>
 <body class="blog">
+  <div class="js__test">تست</div>
+  <script>
+    $("body").on("click", ".js__test", function(e){
+        $("body").addClass("yep");
+    });
+  </script>
 	<div id="page">
 
 		<header class="header">

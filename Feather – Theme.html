@@ -205,6 +205,9 @@ a {
   font-size: 12px;
   cursor: pointer; }
 
+.post-header a {
+  font-size: 22px; }
+
 .container .post {
   background-color: #fff;
   border: 1px solid #e3e3e3;
@@ -403,6 +406,14 @@ a {
   text-align: center;
   padding: 25px 0;
   background-color: #303030; }
+  .footer .copy-right {
+    color: #707070;
+    font-weight: bold;
+    font-size: 12px; }
+    .footer .copy-right a {
+      color: #707070; }
+      .footer .copy-right a:hover {
+        color: #f4793d; }
 
 @media (min-width: 0) and (max-width: 750px) {
   .container {
@@ -435,10 +446,6 @@ a {
         box-sizing: border-box; } }
 
 
-
-
-
-
 	</style>
 
 
@@ -449,8 +456,7 @@ a {
 		<header class="header">
 			<div class="wrapper clearfix">
 				<div class="right-action">
-          <!-- <div class="logo"><a>[cb:blog_logo]</a></div> -->
-					<div class="logo"><a>[cb:blog_title]</a></div>
+          <div class="logo"><a>[cb:blog_logo]</a></div>
 					<div class="menu">
 						<ul class="nav_menu">
 							<cb:block_extrapage>
@@ -720,7 +726,17 @@ a {
 		</div>
 
     <div class="footer">
-      
+      <cb:block_pages>
+        <div class="pagination">
+          <ul>
+            <li>تعداد صفحات :[cb:pages_total]</li>
+              <cb:loop_pages>
+                <li><a href="[cb:pages_href]">[cb:pages_no]</a></li>
+              </cb:loop_pages>
+          </ul>
+        </div>
+      </cb:block_pages>
+      <div class="copy-right">POWERED BY <a href="http://mihanblog.com/">MIHANBLOG.COM</a></div>
     </div>
     <script>
       $("body").on("click", ".js__share-text", function(e){

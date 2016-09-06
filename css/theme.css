@@ -186,6 +186,9 @@ a {
   font-size: 12px;
   cursor: pointer; }
 
+.post-header a {
+  font-size: 22px; }
+
 .container .post {
   background-color: #fff;
   border: 1px solid #e3e3e3;
@@ -384,6 +387,14 @@ a {
   text-align: center;
   padding: 25px 0;
   background-color: #303030; }
+  .footer .copy-right {
+    color: #707070;
+    font-weight: bold;
+    font-size: 12px; }
+    .footer .copy-right a {
+      color: #707070; }
+      .footer .copy-right a:hover {
+        color: #f4793d; }
 
 @media (min-width: 0) and (max-width: 750px) {
   .container {

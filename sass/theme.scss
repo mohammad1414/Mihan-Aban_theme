@@ -195,6 +195,12 @@ a {
 
 }
 
+.post-header {
+	a {
+		font-size: 22px;
+	}
+}
+
 .container {
 	.post {
 		background-color: #fff;
@@ -507,6 +513,19 @@ a {
 	text-align: center;
 	padding: 25px 0;
 	background-color: #303030;
+
+	.copy-right {
+			color: #707070;
+			font-weight: bold;
+			font-size: 12px;
+		a {
+			color: #707070;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
 }
 
 

@@ -281,8 +281,6 @@ a {
 .widget-recent-post a {
   display: block;
   color: #9a9a9a; }
-  .widget-recent-post a:hover {
-    color: #f4793d; }
 
 .widget-recent-post .post {
   border: 0 none;
@@ -303,15 +301,10 @@ a {
 
 .tag-wrapper a {
   display: inline-block;
-  padding: 3px 11px;
-  margin: 0 0 10px 10px;
-  color: #fff;
-  font-size: 10px;
-  background-color: #ababab;
-  border-radius: 3px; }
+  padding: 10px 0 0px 20px;
+  color: #8e8d8d; }
   .tag-wrapper a:hover {
-    color: #f4793d;
-    background-color: #d1d1d1; }
+    color: #f4793d; }
 
 .comment_title_stable {
   margin-bottom: 20px; }

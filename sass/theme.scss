@@ -360,10 +360,6 @@ a {
 	a {
 		display: block;
     	color: #9a9a9a;
-
-    	&:hover {
-    		color: $primary-color;
-    	}
 	}
 
 	.post {
@@ -393,16 +389,11 @@ a {
 
 	a {
 		display: inline-block;
-		padding: 3px 11px;
-		margin: 0 0 10px 10px;
-		color: #fff;
-		font-size: 10px;
-		background-color: #ababab;
-		border-radius: 3px;
+		padding: 10px 0 0px 20px;
+		color: #8e8d8d;
 
 		&:hover {
 			color: $primary-color;
-			background-color: lighten(#ababab, 15%);
 		}
 	}
 }

@@ -46,12 +46,27 @@
   margin-left: .2em; }
 
 .blog h2 {
+  font-size: 20px; }
+
+.blog h3 {
   font-size: 17px; }
+
+.blog h4 {
+  font-size: 15px; }
+
+.blog h5 {
+  font-size: 13px; }
+
+.blog h6 {
+  font-size: 11px; }
 
 p {
   font-size: 12px;
   margin-bottom: 20px;
   line-height: 1.8; }
+
+.post h1 {
+  font-size: 12px; }
 
 .icon-search:before {
   content: '\e800'; }
@@ -93,9 +108,19 @@ a,
 div,
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0; }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 20px; }
 
 ul {
   list-style: none; }
@@ -107,12 +132,22 @@ a {
   a:hover {
     color: #f4793d; }
 
-.clearfix:before,
-.clearfix:after {
+.post a {
+  color: #f4793d; }
+  .post a:hover {
+    color: #c0460b; }
+
+.post ul {
+  list-style: initial;
+  margin: 16px 0;
+  padding-right: 40px; }
+
+.clear_fix:before,
+.clear_fix:after {
   content: " ";
   display: table; }
 
-.clearfix:after {
+.clear_fix:after {
   clear: both; }
 
 .left {
@@ -140,7 +175,7 @@ a {
     .header .menu-item:first-child {
       padding-right: 0; }
     .header .menu-item .menu-item-link {
-      color: #fff; }
+      color: rgba(255, 255, 255, 0.6); }
       .header .menu-item .menu-item-link:hover {
         color: #f4793d; }
   .header .logo {
@@ -266,8 +301,14 @@ a {
 .sidebar p {
   color: #9a9a9a; }
 
+.weblog-title {
+  margin-bottom: 8px; }
+  .weblog-title a {
+    color: #fff; }
+
 .weblog-name {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  text-align: center; }
 
 .widget {
   margin-bottom: 45px; }
@@ -298,8 +339,11 @@ a {
     width: auto !important; }
 
 .widget-recent-post a {
-  display: block;
-  color: #9a9a9a; }
+  color: #9a9a9a;
+  font-size: 13px; }
+
+.widget-recent-post .date {
+  font-size: 11px; }
 
 .widget-recent-post .post {
   border: 0 none;
@@ -320,7 +364,7 @@ a {
 
 .tag-wrapper a {
   display: inline-block;
-  padding: 10px 0 10px 20px;
+  padding: 10px 0 0px 20px;
   color: #8e8d8d; }
   .tag-wrapper a:hover {
     color: #f4793d; }
@@ -339,7 +383,8 @@ a {
 .comment_sender {
   line-height: 1; }
   .comment_sender > a {
-    display: block; }
+    display: block;
+    color: #282828; }
 
 .comment_row {
   margin-bottom: 15px;
@@ -350,31 +395,33 @@ a {
 .comment_list_body {
   margin-top: 14px; }
 
-.comment_form_wrapp {
-  margin-top: 60px; }
-
 .comment_body {
   font-size: 13px; }
 
 .comment_form .comment_form_row {
-  margin-bottom: 15px; }
-  .comment_form .comment_form_row #showsmile {
-    display: none; }
+  margin-bottom: 22px; }
   .comment_form .comment_form_row input,
   .comment_form .comment_form_row textarea {
     border: none;
-    background: #fdfdfd;
+    background: #f3f0f0;
     border: 1px solid #ededed;
     padding: 10px;
     box-sizing: border-box;
-    width: 100%;
     border-radius: 3px; }
+  .comment_form .comment_form_row textarea {
+    width: 100%; }
   .comment_form .comment_form_row input[type="checkbox"] {
     width: auto; }
+  .comment_form .comment_form_row input {
+    width: 84%; }
+  .comment_form .comment_form_row label[for="email"],
+  .comment_form .comment_form_row label[for="web"],
+  .comment_form .comment_form_row label[for="full_name"] {
+    width: 16%;
+    padding-top: 13px; }
   .comment_form .comment_form_row label {
     width: auto;
-    font-size: 12px;
-    float: none; }
+    font-size: 12px; }
 
 .comment_form .msgtitle,
 .comment_form .msgbody {
@@ -383,7 +430,7 @@ a {
   width: auto; }
 
 .comment_form div.controls {
-  text-align: right; }
+  text-align: left; }
   .comment_form div.controls .btn {
     font-family: 'Mihan-Iransans', tahoma, arial;
     background-color: #f4793d;
@@ -430,6 +477,7 @@ a {
       display: block;
       width: 100%; }
     .header .menu {
+      vertical-align: middle;
       padding: 10px 0; }
     .header .search-wrapper {
       float: none;
@@ -437,6 +485,7 @@ a {
       .header .search-wrapper input {
         width: 100%;
         box-sizing: border-box; } }
+
 
 	</style>
 
@@ -446,9 +495,9 @@ a {
 	<div id="page">
 
 		<header class="header">
-			<div class="wrapper clearfix">
+			<div class="wrapper clear_fix">
 				<div class="right-action">
-          <div class="logo"><a>[cb:blog_logo]</a></div>
+          <div class="weblog-title"><a href="[cb:blog_full_address]">[cb:blog_title]</a></div> 
 					<div class="menu">
 						<ul class="nav_menu">
 							<cb:block_extrapage>
@@ -473,7 +522,7 @@ a {
 		<div class="content wrapper">
 			<div class="container">
 				<cb:block_post>
-                    <cb:loop_post>
+            <cb:loop_post>
 						<div class="post">
 							<!-- <div class="post-image">
 							    <a href="#">
@@ -523,7 +572,7 @@ a {
 		                        </div>
 			                	<!-- Comments -->
 	                            <cb:block_post_comment>
-	                                <div class="comment_list clearfix">
+	                                <div class="comment_list clear_fix">
 	                                    <h2 class="comment_title_stable custom_font">ارسال نظر:</h2>
 	                                    <cb:loop_post_comment>
 	                                        <div class="comment_row">
@@ -558,10 +607,23 @@ a {
 		               	</div>
                     </cb:loop_post>
                	</cb:block_post>
+        
+      <cb:block_pages>
+        <div class="pagination">
+          <ul class="clear_fix">
+            <li>تعداد صفحات :[cb:pages_total]</li>
+              <cb:loop_pages>
+                <li><a href="[cb:pages_href]">[cb:pages_no]</a></li>
+              </cb:loop_pages>
+          </ul>
+        </div>
+      </cb:block_pages>
+
 			</div>
 			<div class="sidebar-wrapper">
 
 				<div class="section weblog-name">
+          <div class="logo"><a href="[cb:blog_full_address]">[cb:blog_logo]</a></div>
 					<h3 class="widget-title">[cb:blog_title]</h3>			
 					<div class="wifget-content"><p>[cb:blog_slogan]</p></div>
 				</div>
@@ -585,7 +647,7 @@ a {
             <div class="widget-content">
 								<ul>
 									<cb:loop_author>
-										<li class="cat-item clearfix">
+										<li class="cat-item clear_fix">
 											<a href="[cb:author_href]">[cb:author_name]<span class="number">[cb:author_post_count]</span></a>
 										</li>
 									</cb:loop_author>
@@ -619,7 +681,7 @@ a {
   						<div class="widget-content">
 								<ul>
 									<cb:loop_blog_category>
-										<li class="cat-item clearfix">
+										<li class="cat-item clear_fix">
 											<a href="[cb:blog_category_href]"> [cb:blog_category_name]<span class="number">[cb:blog_category_post_count]</span></a>
 										</li>
 									 </cb:loop_blog_category>
@@ -718,17 +780,7 @@ a {
 		</div>
 
     <div class="footer">
-      <cb:block_pages>
-        <div class="pagination">
-          <ul>
-            <li>تعداد صفحات :[cb:pages_total]</li>
-              <cb:loop_pages>
-                <li><a href="[cb:pages_href]">[cb:pages_no]</a></li>
-              </cb:loop_pages>
-          </ul>
-        </div>
-      </cb:block_pages>
-      <div class="copy-right">قدرت گرفته با <a href="http://mihanblog.com/">میهن‏بلاگ</a></div>
+      <div class="copy-right">قدرت گرفته با <a href="http://mihanblog.com/">میهن‏ب لاگ</a></div>
     </div>
     <script>
       $("body").on("click", ".js__share-text", function(e){

@@ -27,9 +27,24 @@
   margin-left: .2em; }
 
 .blog h2 {
+  font-size: 20px; }
+
+.blog h3 {
   font-size: 17px; }
+
+.blog h4 {
+  font-size: 15px; }
+
+.blog h5 {
+  font-size: 13px; }
+
+.blog h6 {
+  font-size: 11px; }
 
 p {
   font-size: 12px;
   margin-bottom: 20px;
   line-height: 1.8; }
+
+.post h1 {
+  font-size: 12px; }

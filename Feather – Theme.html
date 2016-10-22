@@ -192,12 +192,28 @@ a {
     display: inline-block;
     width: 33%; }
     .header .search-wrapper .keyword {
-      padding: 5px 10px 5px 29px;
+      padding: 2px 10px 2px 29px;
       border-radius: 3px;
       border: 0 none;
       width: 100%;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.8);
       box-sizing: border-box; }
+      .header .search-wrapper .keyword:focus {
+        background-color: #fff; }
+      .header .search-wrapper .keyword::-webkit-input-placeholder {
+        color: #fff;
+        font-size: 11px; }
+      .header .search-wrapper .keyword:-moz-placeholder {
+        /* Firefox 18- */
+        color: #fff;
+        font-size: 11px; }
+      .header .search-wrapper .keyword::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #fff;
+        font-size: 11px; }
+      .header .search-wrapper .keyword:-ms-input-placeholder {
+        color: #fff;
+        font-size: 11px; }
     .header .search-wrapper .search:before {
       left: 1px;
       top: 6px;
@@ -385,8 +401,8 @@ a {
   margin-bottom: 20px; }
 
 .comment_list {
-  border-top: 1px solid #e9e9e9;
-  padding-top: 25px; }
+  padding-top: 25px;
+  margin-top: 15px; }
 
 .comment_date {
   font-size: 11px;
@@ -513,6 +529,30 @@ a {
     padding: 15px;
     float: right; }
 
+.post-tag-wrapper,
+.post-subject-wrapper {
+  font-size: 11px; }
+  .post-tag-wrapper span,
+  .post-subject-wrapper span {
+    color: #d6d6d6;
+    padding: 0 3px;
+    display: inline-block; }
+  .post-tag-wrapper .subject-title,
+  .post-tag-wrapper .tag-title,
+  .post-subject-wrapper .subject-title,
+  .post-subject-wrapper .tag-title {
+    display: inline-block;
+    padding-left: 7px; }
+
+.post-tag-wrapper {
+  margin-top: 30px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  border-top: 1px solid #e9e9e9; }
+
+.post__like {
+  height: 30px; }
+
 	</style>
 
 
@@ -525,14 +565,19 @@ a {
 				<div class="right-action">
           <div class="weblog-title"><a href="[cb:blog_full_address]">[cb:blog_title]</a></div> 
 					<div class="menu">
-						<ul class="nav_menu">
+						<ul class="nav_menu"> 
 							<cb:block_extrapage>
 						      <li class="menu-item right">
 						         <cb:loop_extrapage>     	
 						               <a class="menu-item-link" href="[cb:extrapage_href]">[cb:extrapage_title]</a><br/>
 						         </cb:loop_extrapage>      	
 						      </li>	
-						  	</cb:block_extrapage>  
+						  	</cb:block_extrapage>
+                <li class="menu-item right"><a class="menu-item-link" href="[cb:blog_full_address]">صفحه اصلی</a></li>
+                <!-- <li class="menu-item right"><a class="menu-item-link" href="[cb:blog_email]"> پست الکترونیک</a></li> -->
+                <!-- <li class="menu-item right"><a class="menu-item-link" href="[cb:blog_contact_href]">تماس با ما</a></li> -->
+                <li class="menu-item right"><a class="menu-item-link" href="[cb:blog_rss_href]"><i class="icon-rss icon"></i></a></li>
+                <li class="menu-item right"><a class="menu-item-link" href="[cb:blog_Atom_href]">Atom</a></li>
 						</ul>
 					</div>
 				</div>
@@ -585,15 +630,37 @@ a {
 											 [cb:post_body1]
                                				 [cb:post_body2]
 			                            </div>
-											<div class="readmore">
+											<div class="readmore clear_fix">
 												<!-- <a href="[cb:post_href]">ادامه مطلب</a> -->
-												<div class="post__like">[cb:post_like]</div>
-				                                <div class="post__more">[cb:post_continue_link]</div>
-				                                <!-- <a href="[cb:post_comment_href_onpage]" class="comment_footer">
-				                                 <span>تعداد نظرات:</span>
-				                                    [cb:post_comment_count] 
-				                                </a> -->
+												<div class="post__like left">[cb:post_like]</div>
+                        <div class="post__more">[cb:post_continue_link]</div>
+                        <!-- <a href="[cb:post_comment_href_onpage]" class="comment_footer">
+                         <span>تعداد نظرات:</span>
+                            [cb:post_comment_count] 
+                        </a> -->
 											</div>
+                      <div class="post-tag-wrapper">
+                        <cb:block_post_tag>
+                          <div class="tag-title">برچسب ها:</div>
+                          <cb:loop_post_tag>
+                            <a href="[cb:post_tag_href]" >
+                              [cb:post_tag_name]
+                            </a>
+                            <span>/</span>
+                          </cb:loop_post_tag>
+                        </cb:block_post_tag>
+                      </div>
+                      <div class="post-subject-wrapper">
+                        <cb:block_post_category>
+                          <div class="subject-title">طبقه بندی:</div>
+                          <cb:loop_post_category>
+                            <a href="[cb:post_category_href]">
+                              [cb:post_category_name]
+                            </a>
+                            <span>/</span>
+                           </cb:loop_post_category>
+                        </cb:block_post_category>
+                      </div>
 		                            </div>
 		                        </div>
 			                	<!-- Comments -->

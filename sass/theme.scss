@@ -233,7 +233,9 @@ a {
 }
 
 .container {
-	.post {
+
+	.post,
+	.pagination {
 		background-color: #fff;
 		border: 1px solid darken($theme_bg_color, 6%);
 		margin-bottom: 45px;
@@ -640,11 +642,28 @@ a {
  }
 
  .pagination {
+ 	font-size: 12px;
 
  	li {
+ 		float: left;
 
- 		&:first-child {
-			float: right;
+ 		a {
+			padding: 15px;
+ 			display: block;
+
+ 			b {
+ 				color: $primary-color;
+ 			}
+
+ 			&:hover {
+ 				background-color: #f1f1f1;
+ 				color: $primary-color;
+ 			}
  		}
+ 	}
+
+ 	.all-page {
+		padding: 15px;
+		float: right;
  	}
  }

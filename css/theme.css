@@ -536,9 +536,27 @@ a {
     font-weight: bold;
     font-size: 12px; }
     .footer .copy-right a {
-      color: #707070; }
+      color: #707070;
+      display: inline-block; }
       .footer .copy-right a:hover {
         color: #f4793d; }
+  .footer .heart {
+    fill: red;
+    position: relative;
+    top: 4px;
+    width: 50px;
+    animation: pulse 1s ease infinite;
+    width: 15px;
+    margin: 0 8px;
+    opacity: 0.5; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
 
 .social-wrapper {
   text-align: center;

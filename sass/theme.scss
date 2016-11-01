@@ -101,10 +101,11 @@ a {
 .header {
 	background-color: #363636;
 	padding: 100px 0;
-	background-image: url(../img/bg-d.jpg);
+	background-image: url(http://file.mihanblog.com//public/user_data/user_files/639/1915628/bg_b.JPG);
+	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-    background-position-y: 40%;
+    background-position-y: 72%;
 
 	&:before {
 		content: '';
@@ -181,7 +182,7 @@ a {
 		    border-radius: 3px;
 		    border: 0 none;
 		    width: 100%;
-		    background: rgba(255, 255, 255, 0.8);
+		    background: rgba(255, 255, 255, 0.6);
 		    box-sizing: border-box;
 
 		    &:focus {
@@ -189,22 +190,22 @@ a {
 		    }
 
 			&::-webkit-input-placeholder {
-			   color: #fff;
+			   color: #444;
 			   font-size: 11px;
 			}
 
 			&:-moz-placeholder { /* Firefox 18- */
-			   color: #fff;
+			   color: #444;
 			   font-size: 11px;  
 			}
 
 			&::-moz-placeholder {  /* Firefox 19+ */
-			   color: #fff;
+			   color: #444;
 			   font-size: 11px;
 			}
 
 			&:-ms-input-placeholder {  
-			   color: #fff;
+			   color: #444;
 			   font-size: 11px;
 			}
 		}
@@ -265,6 +266,10 @@ a {
 		margin: 0;
 		padding: 0;
 
+		a {
+			font-size: 15px;
+		}
+
 		li {
 			display: inline-block;
 		}
@@ -323,29 +328,29 @@ a {
 		}
 	}
 
-	.post-meta {
+	.post-content {
+		padding: 30px 25px;
+	}
+}
 
-		span {
-			padding-left: 20px;
-			display: inline-block;
+.post-meta {
 
-			&:last-child {
-				padding-left: 0;
-			}
-		}
+	span {
+		padding-left: 20px;
+		display: inline-block;
 
-		a {
-			color: #c1c0c0;
-			font-size: 11px;
-
-			&:hover {
-				color: $primary-color;
-			}
+		&:last-child {
+			padding-left: 0;
 		}
 	}
 
-	.post-content {
-		padding: 30px 25px;
+	a {
+		color: #c1c0c0;
+		font-size: 11px;
+
+		&:hover {
+			color: $primary-color;
+		}
 	}
 }
 
@@ -681,7 +686,9 @@ a {
 
 // 
 // Media Queries
- @media (min-width: 0) and (max-width: 750px) {
+
+
+@media (min-width: 0) and (max-width: 750px) {
 	.container {
 		width: 100%;
 		padding-left: 0;
@@ -707,6 +714,12 @@ a {
 
 	.header {
 		text-align: center;
+		padding: 50px 0;
+
+		.other-item {
+			float: none;
+			display: inline-block;
+		}	
 
 		.logo {
 			display: block;
@@ -719,7 +732,7 @@ a {
 		}
 
 		.left-action {
-			width: 30%;
+			width: 75%;
 		}
 
 		.menu {
@@ -734,6 +747,16 @@ a {
 				width: 100%;
 				box-sizing: border-box;
 			}
+		}
+	}
+}
+
+
+ @media (min-width: 0) and (max-width: 500px) {
+	.header {
+
+		.left-action {
+			width: 100%;
 		}
 	}
  }

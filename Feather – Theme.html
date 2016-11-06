@@ -16,8 +16,7 @@
   <link rel="alternate" type="application/atom+xml" title="[cb:blog_title]" 
     href="[cb:blog_atom_href]" />
 	<link href="css/theme.css" rel="stylesheet">
-
-	<style>
+<style>
 @charset "UTF-8";
 @font-face {
   font-family: 'Iransans';
@@ -27,8 +26,8 @@
 
 @font-face {
   font-family: 'mihan-theme-icons';
-  src: url("../font/fonticon/font/fontello.eot?82035505");
-  src: url("../font/fonticon/font/fontello.eot?82035505#iefix") format("embedded-opentype"), url("../font/fonticon/font/fontello.svg?82035505#fontello") format("svg"), url("../font/fonticon/font/fontello.woff?82035505") format("woff");
+  src: url("http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.eot?82035505");
+  src: url("http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.eot?82035505#iefix") format("embedded-opentype"), url("http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.svg?82035505#fontello") format("svg"), url("http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.woff?82035505") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -604,13 +603,10 @@ a {
   .container {
     width: 100%;
     padding-left: 0;
-    padding-top: 430px; }
-  .section.weblog-name {
-    position: absolute;
-    top: 1%;
-    width: 92%; }
+    margin-bottom: 30px; }
   .content {
-    position: relative; }
+    position: relative;
+    padding: 55px 10px; }
   .sidebar-wrapper {
     width: 100%; }
   .header {
@@ -638,7 +634,11 @@ a {
 
 @media (min-width: 0) and (max-width: 500px) {
   .header .left-action {
-    width: 100%; } }
+    width: 100%; }
+  .social-wrapper .social-item {
+    width: 17%;
+    margin-left: 0;
+    margin-bottom: 7px; } }
 
 .pagination {
   font-size: 12px; }
@@ -680,8 +680,8 @@ a {
 .post__like {
   height: 30px; }
 
+</style>
 
-	</style>
 </head>
 
 <body class="blog">
@@ -761,10 +761,7 @@ a {
           				        							</ul>
         						                </span>                     
                                 </div>
-										<div class="main-content">
-											 [cb:post_body1]
-                               				 [cb:post_body2]
-			                            </div>
+										<div class="main-content">[cb:post_body1][cb:post_body2]</div>
 											<div class="readmore clear_fix">
 												<!-- <a href="[cb:post_href]">ادامه مطلب</a> -->
 												<div class="post__like left">[cb:post_like]</div>
@@ -775,68 +772,67 @@ a {
                         </a> -->
 											</div>
                         <cb:block_post_tag>
-                      <div class="post-tag-wrapper">
-                          <div class="tag-title">برچسب ها:</div>
-                          <cb:loop_post_tag>
-                            <a href="[cb:post_tag_href]" >
-                              [cb:post_tag_name]
-                            </a>
-                            <span>/</span>
-                          </cb:loop_post_tag>
-                      </div>
+                          <div class="post-tag-wrapper">
+                              <div class="tag-title">برچسب ها:</div>
+                              <cb:loop_post_tag>
+                                <a href="[cb:post_tag_href]" >
+                                  [cb:post_tag_name]
+                                </a>
+                                <span>/</span>
+                              </cb:loop_post_tag>
+                          </div>
                         </cb:block_post_tag>
-                      <div class="post-subject-wrapper">
-                        <cb:block_post_category>
-                          <div class="subject-title">طبقه بندی:</div>
-                          <cb:loop_post_category>
-                            <a href="[cb:post_category_href]">
-                              [cb:post_category_name]
-                            </a>
-                            <span>/</span>
-                           </cb:loop_post_category>
-                        </cb:block_post_category>
+                          <div class="post-subject-wrapper">
+                            <cb:block_post_category>
+                              <div class="subject-title">طبقه بندی:</div>
+                              <cb:loop_post_category>
+                                <a href="[cb:post_category_href]">
+                                  [cb:post_category_name]
+                                </a>
+                                <span>/</span>
+                               </cb:loop_post_category>
+                            </cb:block_post_category>
+                          </div>
+                        </div>
                       </div>
-		                            </div>
-		                        </div>
 			                	<!-- Comments -->
-	                            <cb:block_post_comment>
-	                                <div class="comment_list clear_fix">
-	                                    <h2 class="comment_title_stable custom_font">ارسال نظر:</h2>
-	                                    <cb:loop_post_comment>
-	                                        <div class="comment_row">
-	                                            <div class="comment_sender">
-	                                                <a href="[cb:post_comment_senderweb]" target="_blank">
-	                                                    [cb:post_comment_sendername]
-	                                                </a> 
-	                                                <span class="comment_date">
-	                                                 [cb:post_comment_date]
-	                                                </span>
-	                                            </div>
+                          <cb:block_post_comment>
+                              <div class="comment_list clear_fix">
+                                  <h2 class="comment_title_stable custom_font">ارسال نظر:</h2>
+                                  <cb:loop_post_comment>
+                                      <div class="comment_row">
+                                          <div class="comment_sender">
+                                              <a href="[cb:post_comment_senderweb]" target="_blank">
+                                                  [cb:post_comment_sendername]
+                                              </a> 
+                                              <span class="comment_date">
+                                               [cb:post_comment_date]
+                                              </span>
+                                          </div>
 
-	                                            <div class="comment_list_body">
-	                                                <div class="comment_body">
-	                                                    [cb:post_comment_body]
-	                                                </div>
-	                                                    [cb:post_comment_replystart]
-	                                                    <div class="comment_replay">
-	                                                        <div>
-	                                                            <i>[cb:post_comment_replyname]</i>: [cb:post_comment_replybody]
-	                                                        </div>
-	                                                    </div>
-	                                                    [cb:post_comment_replyend]
-	                                            </div>
-	                                        </div>
-	                                    </cb:loop_post_comment>
-	                                    <div class="comment_form_wrapp">[cb:post_comment_form]</div>
-	                                </div>
-	                            </cb:block_post_comment>
-	                            <!-- Comments  -->
+                                          <div class="comment_list_body">
+                                              <div class="comment_body">
+                                                  [cb:post_comment_body]
+                                              </div>
+                                                  [cb:post_comment_replystart]
+                                                  <div class="comment_replay">
+                                                      <div>
+                                                          <i>[cb:post_comment_replyname]</i>: [cb:post_comment_replybody]
+                                                      </div>
+                                                  </div>
+                                                  [cb:post_comment_replyend]
+                                          </div>
+                                      </div>
+                                  </cb:loop_post_comment>
+                                  <div class="comment_form_wrapp">[cb:post_comment_form]</div>
+                              </div>
+                          </cb:block_post_comment>
+                        <!-- Comments  -->
 		                	</div>
 		               	</div>
                     </cb:loop_post>
-               	</cb:block_post>
-        
-      <cb:block_pages>
+               	</cb:block_post>    
+        <cb:block_pages>
         <div class="pagination">
           <ul class="clear_fix">
             <li class="all-page">تعداد صفحات :[cb:pages_total]</li>
@@ -846,165 +842,164 @@ a {
           </ul>
         </div>
       </cb:block_pages>
+    </div>
+  			<div class="sidebar-wrapper">
 
-			</div>
-			<div class="sidebar-wrapper">
+  				<div class="section weblog-name">
+            <div class="logo"><a href="[cb:blog_full_address]">[cb:blog_logo]</a></div>
+  					<h3 class="widget-title">[cb:blog_title]</h3>			
+  					<div class="wifget-content"><p>[cb:blog_slogan]</p></div>
+  				</div>
 
-				<div class="section weblog-name">
-          <div class="logo"><a href="[cb:blog_full_address]">[cb:blog_logo]</a></div>
-					<h3 class="widget-title">[cb:blog_title]</h3>			
-					<div class="wifget-content"><p>[cb:blog_slogan]</p></div>
-				</div>
-
-				<cb:block_author>
-        <div class="section sidebar">
-          <div class="widget widget-about">
-            <div class="author-info-container">
-	          					<cb:loop_author>
-						            <div class="author-image">[cb:author_photo_small]</div>
-						            <div class="author-name">[cb:author_name]</div>
-						            <div class="author-about"><p>[cb:author_about_me]</p></div>
-					            </cb:loop_author>
-                  </div>
-          </div>
-				</cb:block_author>
-
-				<cb:block_author>
-          <div class="widget widget-authors">
-            <h3 class="widget-title">نویسندگان</h3>
-            <div class="widget-content">
-								<ul>
-									<cb:loop_author>
-										<li class="cat-item clear_fix">
-											<a href="[cb:author_href]">[cb:author_name]<span class="number">[cb:author_post_count]</span></a>
-										</li>
-									</cb:loop_author>
-								</ul>
+  				<cb:block_author>
+          <div class="section sidebar">
+            <div class="widget widget-about">
+              <div class="author-info-container">
+  	          					<cb:loop_author>
+  						            <div class="author-image">[cb:author_photo_small]</div>
+  						            <div class="author-name">[cb:author_name]</div>
+  						            <div class="author-about"><p>[cb:author_about_me]</p></div>
+  					            </cb:loop_author>
+                    </div>
             </div>
-          </div>
-				</cb:block_author>
+  				</cb:block_author>
 
-				<cb:block_stat>
-          <div class="widget widget-stat">
-            <h3 class="widget-title">آمار وبلاگ</h3>
-            <div class="widget-content">
-								<p>
-									کل بازدید:[cb:stat_total_view]<br/>
-									بازدید امروز :[cb:stat_today_view]<br/>
-									بازدید دیروز : [cb:stat_yesterday_view]<br/>
-									بازدید این ماه : [cb:stat_this_month_view]<br/>
-									بازدید ماه قبل : [cb:stat_last_month_view]<br/>
-									تعداد نویسندگان : [cb:stat_total_author]<br/>
-									تعداد کل مطالب : [cb:stat_total_post]<br/>
-									آخرین بازدید : [cb:stat_last_view_date]<br/>
-									آخرین بروز رسانی : [cb:stat_modify_date]<br/>
-								</p>
-            </div>
-          </div>
-				</cb:block_stat>
-
-          <cb:block_blog_category>
-  					<div class="widget widget-archive-cat">
-  						<h3 class="widget-title">آرشیو موضوعی</h3>
-  						<div class="widget-content">
-								<ul>
-									<cb:loop_blog_category>
-										<li class="cat-item clear_fix">
-											<a href="[cb:blog_category_href]"> [cb:blog_category_name]<span class="number">[cb:blog_category_post_count]</span></a>
-										</li>
-									 </cb:loop_blog_category>
-								</ul>
-  						</div>
-  					</div>
-          </cb:block_blog_category>
-
-					<cb:block_blog_archive>
-            <div class="widget widget-archive">
-              <h3 class="widget-title">آرشیو</h3>
+  				<cb:block_author>
+            <div class="widget widget-authors">
+              <h3 class="widget-title">نویسندگان</h3>
               <div class="widget-content">
   								<ul>
-  									<cb:loop_blog_archive>
-  										<li class="cat-item">
-  											<a href="[cb:blog_archive_href]"> [cb:blog_archive_text]</a>
+  									<cb:loop_author>
+  										<li class="cat-item clear_fix">
+  											<a href="[cb:author_href]">[cb:author_name]<span class="number">[cb:author_post_count]</span></a>
   										</li>
-  									 </cb:loop_blog_archive>
-  									 <li class="cat-item last"><a href="[cb:blog_archive_full_list_href]">همه آرشیوها</a></li>
+  									</cb:loop_author>
   								</ul>
               </div>
             </div>
-					</cb:block_blog_archive>
+  				</cb:block_author>
 
-					<cb:block_link>
-            <div class="widget widget-linkestan">
-              <h3 class="widget-title">لینکستان</h3>
+  				<cb:block_stat>
+            <div class="widget widget-stat">
+              <h3 class="widget-title">آمار وبلاگ</h3>
               <div class="widget-content">
+  								<p>
+  									کل بازدید:[cb:stat_total_view]<br/>
+  									بازدید امروز :[cb:stat_today_view]<br/>
+  									بازدید دیروز : [cb:stat_yesterday_view]<br/>
+  									بازدید این ماه : [cb:stat_this_month_view]<br/>
+  									بازدید ماه قبل : [cb:stat_last_month_view]<br/>
+  									تعداد نویسندگان : [cb:stat_total_author]<br/>
+  									تعداد کل مطالب : [cb:stat_total_post]<br/>
+  									آخرین بازدید : [cb:stat_last_view_date]<br/>
+  									آخرین بروز رسانی : [cb:stat_modify_date]<br/>
+  								</p>
+              </div>
+            </div>
+  				</cb:block_stat>
+
+            <cb:block_blog_category>
+    					<div class="widget widget-archive-cat">
+    						<h3 class="widget-title">آرشیو موضوعی</h3>
+    						<div class="widget-content">
   								<ul>
-  									<cb:loop_link>
-  										<li class="cat-item">
-  											<a href="[cb:link_href]" title="[cb:link_title]" target="_blank"> [cb:link_text]</a>
+  									<cb:loop_blog_category>
+  										<li class="cat-item clear_fix">
+  											<a href="[cb:blog_category_href]"> [cb:blog_category_name]<span class="number">[cb:blog_category_post_count]</span></a>
   										</li>
-  									 </cb:loop_link>
-  									 <li class="cat-item last"><a href="[cb:link_full_list_href]">همه لینکها</a></li>
+  									 </cb:loop_blog_category>
   								</ul>
-              </div>
-            </div>
-					</cb:block_link>
+    						</div>
+    					</div>
+            </cb:block_blog_category>
 
-					<cb:block_linkdaily>
-            <div class="widget widget-linkestan">
-              <h3 class="widget-title">لینکدونی</h3>
-              <div class="widget-content">
-  								<ul>
-  									<cb:loop_linkdaily> 
-  										<li class="cat-item">
-  											<a href="[cb:linkdaily_href]" title="[cb:linkdaily_title]" target="_blank">[cb:linkdaily_text]</a>
-  										</li>
-  									 </cb:loop_linkdaily>
-  									 <li class="cat-item"><a href="[cb:linkdaily_full_list_href]">همه لینکها</a></li>
-  									 <li class="cat-item last"><a href="[cb:linkdaily_new_href]">ارسال لینک</a></li>
-  								</ul>
+  					<cb:block_blog_archive>
+              <div class="widget widget-archive">
+                <h3 class="widget-title">آرشیو</h3>
+                <div class="widget-content">
+    								<ul>
+    									<cb:loop_blog_archive>
+    										<li class="cat-item">
+    											<a href="[cb:blog_archive_href]"> [cb:blog_archive_text]</a>
+    										</li>
+    									 </cb:loop_blog_archive>
+    									 <li class="cat-item last"><a href="[cb:blog_archive_full_list_href]">همه آرشیوها</a></li>
+    								</ul>
+                </div>
               </div>
-            </div>
-					</cb:block_linkdaily>
+  					</cb:block_blog_archive>
 
-					<cb:block_blog_recent_post>
-            <div class="widget widget-recent-post">
-              <h3 class="widget-title">آخرین مطالب</h3>
-              <div class=" widget-content">
-  								<cb:loop_blog_recent_post>
-  									<div class="post cat-item">
-                      		<!-- <div class="post-image">
-                      			<a href="[cb:blog_recent_post_href]">
-                      				<img width="60" height="60" src="img/post-1.jpg" class="post_thumb-img">
-                  				</a>
-                  			   </div> -->
-                          	<div class="post-content">
-                          		<a href="[cb:blog_recent_post_href]">
-	                          		[cb:blog_recent_post_text]<br>
-                          		<span class="date">[cb:blog_recent_post_date]</span>
-                          		</a>
-  										</div>
-  									</div>
-  								</cb:loop_blog_recent_post>
-                <div class="all-post"><p><a href="[cb:blog_recent_post_full_list_href]">همه مطالب ارسالی</a></p></div>
+  					<cb:block_link>
+              <div class="widget widget-linkestan">
+                <h3 class="widget-title">لینکستان</h3>
+                <div class="widget-content">
+    								<ul>
+    									<cb:loop_link>
+    										<li class="cat-item">
+    											<a href="[cb:link_href]" title="[cb:link_title]" target="_blank"> [cb:link_text]</a>
+    										</li>
+    									 </cb:loop_link>
+    									 <li class="cat-item last"><a href="[cb:link_full_list_href]">همه لینکها</a></li>
+    								</ul>
+                </div>
               </div>
-            </div>
-					</cb:block_blog_recent_post>
-					
-					<cb:block_blog_tag_cloud>
-            <div class="widget widget-tags">
-              <div class="widget-title">ابر برچسب</div>
-              <div class="widget-content">
-  								<div class="tag-wrapper">
-  									<cb:loop_blog_tag_cloud>
-  										<a href="[cb:blog_tag_cloud_href]" class="tag-link">[cb:blog_tag_cloud_text]</a>
-  									</cb:loop_blog_tag_cloud>
-  								</div>
+  					</cb:block_link>
+
+  					<cb:block_linkdaily>
+              <div class="widget widget-linkestan">
+                <h3 class="widget-title">لینکدونی</h3>
+                <div class="widget-content">
+    								<ul>
+    									<cb:loop_linkdaily> 
+    										<li class="cat-item">
+    											<a href="[cb:linkdaily_href]" title="[cb:linkdaily_title]" target="_blank">[cb:linkdaily_text]</a>
+    										</li>
+    									 </cb:loop_linkdaily>
+    									 <li class="cat-item"><a href="[cb:linkdaily_full_list_href]">همه لینکها</a></li>
+    									 <li class="cat-item last"><a href="[cb:linkdaily_new_href]">ارسال لینک</a></li>
+    								</ul>
+                </div>
               </div>
-            </div>
-					</cb:block_blog_tag_cloud>
-				</div>
-			</div>
+  					</cb:block_linkdaily>
+
+  					<cb:block_blog_recent_post>
+              <div class="widget widget-recent-post">
+                <h3 class="widget-title">آخرین مطالب</h3>
+                <div class=" widget-content">
+    								<cb:loop_blog_recent_post>
+    									<div class="post cat-item">
+                        		<!-- <div class="post-image">
+                        			<a href="[cb:blog_recent_post_href]">
+                        				<img width="60" height="60" src="img/post-1.jpg" class="post_thumb-img">
+                    				</a>
+                    			   </div> -->
+                            	<div class="post-content">
+                            		<a href="[cb:blog_recent_post_href]">
+  	                          		[cb:blog_recent_post_text]<br>
+                            		<span class="date">[cb:blog_recent_post_date]</span>
+                            		</a>
+    										</div>
+    									</div>
+    								</cb:loop_blog_recent_post>
+                  <div class="all-post"><p><a href="[cb:blog_recent_post_full_list_href]">همه مطالب ارسالی</a></p></div>
+                </div>
+              </div>
+  					</cb:block_blog_recent_post>
+  					
+  					<cb:block_blog_tag_cloud>
+              <div class="widget widget-tags">
+                <div class="widget-title">ابر برچسب</div>
+                <div class="widget-content">
+    								<div class="tag-wrapper">
+    									<cb:loop_blog_tag_cloud>
+    										<a href="[cb:blog_tag_cloud_href]" class="tag-link">[cb:blog_tag_cloud_text]</a>
+    									</cb:loop_blog_tag_cloud>
+    								</div>
+                </div>
+              </div>
+  					</cb:block_blog_tag_cloud>
+  				</div>
+  			</div>
 		</div>
 
     <div class="footer">

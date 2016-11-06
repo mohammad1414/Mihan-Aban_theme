@@ -7,8 +7,8 @@
 
 @font-face {
   font-family: 'mihan-theme-icons';
-  src: url("../font/fonticon/font/fontello.eot?82035505");
-  src: url("../font/fonticon/font/fontello.eot?82035505#iefix") format("embedded-opentype"), url("../font/fonticon/font/fontello.svg?82035505#fontello") format("svg"), url("../font/fonticon/font/fontello.woff?82035505") format("woff");
+  src: url("http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.eot?82035505");
+  src: url("http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.eot?82035505#iefix") format("embedded-opentype"), url("http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.svg?82035505#fontello") format("svg"), url("http://parhum.net/a/mohammadshah/mihanblog/fonticon/font/fontello.woff?82035505") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -584,13 +584,10 @@ a {
   .container {
     width: 100%;
     padding-left: 0;
-    padding-top: 430px; }
-  .section.weblog-name {
-    position: absolute;
-    top: 1%;
-    width: 92%; }
+    margin-bottom: 30px; }
   .content {
-    position: relative; }
+    position: relative;
+    padding: 55px 10px; }
   .sidebar-wrapper {
     width: 100%; }
   .header {
@@ -618,7 +615,11 @@ a {
 
 @media (min-width: 0) and (max-width: 500px) {
   .header .left-action {
-    width: 100%; } }
+    width: 100%; }
+  .social-wrapper .social-item {
+    width: 17%;
+    margin-left: 0;
+    margin-bottom: 7px; } }
 
 .pagination {
   font-size: 12px; }

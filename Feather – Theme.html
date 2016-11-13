@@ -308,7 +308,7 @@ a {
     max-width: 100%; }
 
 .content {
-  padding: 55px 20px; }
+  padding: 30px 20px; }
 
 .share-post .social-icons {
   display: inline-block;
@@ -331,8 +331,8 @@ a {
   font-size: 12px;
   cursor: pointer; }
 
-.post-header a {
-  font-size: 22px; }
+.post-header {
+  margin-bottom: 0; }
 
 .container .post,
 .container .pagination {
@@ -362,15 +362,18 @@ a {
   .post-meta span:last-child {
     padding-left: 0; }
 
-.post-meta a {
-  color: #c1c0c0;
+.post-meta a,
+.post-meta .date {
+  color: #8d8d8d;
   font-size: 11px; }
-  .post-meta a:hover {
-    color: #f4793d; }
+
+.post-meta a:hover {
+  color: #f4793d; }
 
 .main-content {
   color: #636467;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  margin-top: 18px; }
 
 .readmore a {
   background-color: #f4793d;
@@ -645,7 +648,8 @@ a {
     float: left; }
     .pagination li a {
       padding: 15px;
-      display: block; }
+      display: block;
+      color: #383838; }
       .pagination li a b {
         color: #f4793d; }
       .pagination li a:hover {
@@ -744,11 +748,11 @@ a {
                                 <div class="post-meta">
                                     <span class="date-span">
 	                                    <i class="fa fa-lg fa-clock-o"></i>
-	                                    <a href="#">[cb:post_edit_date]</a>
+	                                    <span class="date">[cb:post_create_date]</span>
                                     </span>
 
                                     <span class="comments-span">
-	                                    <a href="#"><i class="icon icon-comment-empty"></i>[cb:post_comment_count]</a>
+	                                    <a href="[cb:post_comment_href]"><i class="icon icon-comment-empty"></i>[cb:post_comment_count]</a>
                                     </span>
 
                                     <span class="share-post">

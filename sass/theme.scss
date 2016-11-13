@@ -250,7 +250,7 @@ a {
 }
 
 .content {
-	padding: 55px 20px;
+	padding: 30px 20px;
 }
 
 
@@ -289,9 +289,11 @@ a {
 }
 
 .post-header {
-	a {
-		font-size: 22px;
-	}
+	margin-bottom: 0;
+
+	// a {
+	// 	font-size: 22px;
+	// }
 }
 
 .container {
@@ -344,19 +346,21 @@ a {
 		}
 	}
 
-	a {
-		color: #c1c0c0;
+	a,
+	.date {
+		color: #8d8d8d;
 		font-size: 11px;
+	}
 
-		&:hover {
-			color: $primary-color;
-		}
+	a:hover {
+		color: $primary-color;
 	}
 }
 
 .main-content {
 	color: #636467;
 	margin-bottom: 25px;
+	margin-top: 18px;
 }
 
 .readmore {
@@ -810,6 +814,7 @@ a {
  		a {
 			padding: 15px;
  			display: block;
+ 			color: #383838; 
 
  			b {
  				color: $primary-color;

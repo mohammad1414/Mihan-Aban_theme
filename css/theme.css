@@ -399,16 +399,18 @@ a {
     cursor: pointer;
     display: inline-block;
     margin-top: 2px; }
-  .widget-survey input[type="submit"] {
+  .widget-survey input[type="radio"] {
     vertical-align: middle; }
   .widget-survey input[type="submit"] {
+    cursor: pointer;
     border: 0 none;
     margin-top: 10px;
     background-color: #f4793d;
     border-radius: 3px;
     padding: 3px 12px;
     color: #fff;
-    font-size: 12px; }
+    font-size: 12px;
+    transition: background-color 300ms ease-out; }
     .widget-survey input[type="submit"]:hover {
       background-color: #f2621b; }
 

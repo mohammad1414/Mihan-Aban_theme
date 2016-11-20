@@ -430,11 +430,12 @@ a {
 		margin-top: 2px;
 	}
 
-	input[type="submit"] {
+	input[type="radio"] {
 		vertical-align: middle;
 	}
 
 	input[type="submit"] {
+		cursor: pointer;
 	    border: 0 none;
 	    margin-top: 10px;
 	    background-color: $primary-color;
@@ -442,6 +443,7 @@ a {
 	    padding: 3px 12px;
 	    color: #fff;
 	    font-size: 12px;
+	    transition: background-color 300ms ease-out;
 
 	    &:hover {
 			background-color: darken($primary-color, 7%);

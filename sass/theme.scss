@@ -420,6 +420,35 @@ a {
 	text-align: center;
 }
 
+.widget-survey {
+	font-size: 12px;
+	color: #4d4c4c;
+
+	label {
+		cursor: pointer;
+		display: inline-block;
+		margin-top: 2px;
+	}
+
+	input[type="submit"] {
+		vertical-align: middle;
+	}
+
+	input[type="submit"] {
+	    border: 0 none;
+	    margin-top: 10px;
+	    background-color: $primary-color;
+	    border-radius: 3px;
+	    padding: 3px 12px;
+	    color: #fff;
+	    font-size: 12px;
+
+	    &:hover {
+			background-color: darken($primary-color, 7%);
+	    }
+	}
+}
+
 .widget {
 	margin-bottom: 45px;
 
@@ -447,7 +476,8 @@ a {
 		a {
 			display: block;
 			padding: 12px;
-    		color: #9a9a9a;
+    		color: #4d4c4c;
+    		font-size: 12px;
 
     		&:hover {
     			background-color: darken($theme_bg_color, 2%);
@@ -478,12 +508,13 @@ a {
 	}
 
 	.date {
-		font-size: 11px;
+		font-size: 10px;
+		color: #999;
 	}
 
 	.post {
 		border: 0 none;
-		margin-bottom: 5px;
+		// margin-bottom: 5px;
 	}
 
 	.post-image {
@@ -498,7 +529,7 @@ a {
 		font-size: 11px;
 		vertical-align: top;
 	    border-bottom: 1px solid #ededed;
-		padding: 8px 0;
+		// padding: 8px 0;
 		// display: inline-block;
 		// max-width: 75%;
 	}
@@ -568,12 +599,14 @@ a {
 
 .comment_body {
 	font-size: 13px;
+	overflow: hidden;
 }
 
 .comment_form {
 
 	.comment_form_row {
 		margin-bottom: 22px;
+		font-size: 13px;
 
 		input,
 		textarea {

@@ -410,6 +410,26 @@ a {
   margin-bottom: 20px;
   text-align: center; }
 
+.widget-survey {
+  font-size: 12px;
+  color: #4d4c4c; }
+  .widget-survey label {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2px; }
+  .widget-survey input[type="submit"] {
+    vertical-align: middle; }
+  .widget-survey input[type="submit"] {
+    border: 0 none;
+    margin-top: 10px;
+    background-color: #f4793d;
+    border-radius: 3px;
+    padding: 3px 12px;
+    color: #fff;
+    font-size: 12px; }
+    .widget-survey input[type="submit"]:hover {
+      background-color: #f2621b; }
+
 .widget {
   margin-bottom: 45px; }
   .widget .widget-title {
@@ -425,7 +445,8 @@ a {
     .widget .cat-item a {
       display: block;
       padding: 12px;
-      color: #9a9a9a; }
+      color: #4d4c4c;
+      font-size: 12px; }
       .widget .cat-item a:hover {
         background-color: #ededed;
         color: #f4793d; }
@@ -443,11 +464,11 @@ a {
   font-size: 13px; }
 
 .widget-recent-post .date {
-  font-size: 11px; }
+  font-size: 10px;
+  color: #999; }
 
 .widget-recent-post .post {
-  border: 0 none;
-  margin-bottom: 5px; }
+  border: 0 none; }
 
 .widget-recent-post .post-image {
   padding-left: 20px;
@@ -459,8 +480,7 @@ a {
 .widget-recent-post .post-content {
   font-size: 11px;
   vertical-align: top;
-  border-bottom: 1px solid #ededed;
-  padding: 8px 0; }
+  border-bottom: 1px solid #ededed; }
 
 .tag-wrapper a {
   display: inline-block;
@@ -502,10 +522,12 @@ a {
   margin-top: 14px; }
 
 .comment_body {
-  font-size: 13px; }
+  font-size: 13px;
+  overflow: hidden; }
 
 .comment_form .comment_form_row {
-  margin-bottom: 22px; }
+  margin-bottom: 22px;
+  font-size: 13px; }
   .comment_form .comment_form_row input,
   .comment_form .comment_form_row textarea {
     border: none;
@@ -694,18 +716,17 @@ a {
 				<div class="right-action">
           <div class="weblog-title"><a href="[cb:blog_full_address]">[cb:blog_title]</a></div> 
 					<div class="menu">
-						<ul class="nav_menu"> 
 							<cb:block_extrapage>
-						      <li class="menu-item right">
-						         <cb:loop_extrapage>     	
-						               <a class="menu-item-link header-link" href="[cb:extrapage_href]">[cb:extrapage_title]</a><br/>
-						         </cb:loop_extrapage>      	
-						      </li>	
-						  	</cb:block_extrapage>
-                <li class="menu-item right"><a class="menu-item-link header-link" href="[cb:blog_full_address]">صفحه اصلی</a></li>
+            <ul class="nav_menu"> 
+              <cb:loop_extrapage>     	
+                  <li class="menu-item right">
+		                <a class="menu-item-link header-link" href="[cb:extrapage_href]">[cb:extrapage_title]</a><br/>
+                  </li> 
+              </cb:loop_extrapage>      	
                 <!-- <li class="menu-item right"><a class="menu-item-link" href="[cb:blog_email]"> پست الکترونیک</a></li> -->
                 <!-- <li class="menu-item right"><a class="menu-item-link" href="[cb:blog_contact_href]">تماس با ما</a></li> -->
-						</ul>
+            </ul>
+						  	</cb:block_extrapage>
 					</div>
 				</div>
         <div class="left-action">
@@ -1001,6 +1022,17 @@ a {
                 </div>
               </div>
   					</cb:block_blog_tag_cloud>
+
+            <div class="widget widget-survey">
+              <cb:block_poll>
+              <div class="widget-title">نظرسنجی</div>
+               [cb:poll_question]<br>
+               <cb:loop_poll>
+                [cb:poll_answer]<br> 
+               </cb:loop_poll>  
+               <input type="submit" value="[cb:poll_button_text]"/>
+              </cb:block_poll>
+            </div>
   				</div>
   			</div>
 		</div>
